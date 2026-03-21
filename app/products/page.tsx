@@ -1,8 +1,12 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { ShoppingCart } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Products',
+  description: 'Browse our range of water filters, reverse osmosis systems, UV sterilisers and more from Aqua Solutions International.',
+};
 
 export default function Products() {
   const products = [
@@ -76,7 +80,7 @@ export default function Products() {
     <div className="min-h-screen flex flex-col">
       <Navigation />
 
-      <main className="flex-grow">
+      <main className="grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -90,13 +94,13 @@ export default function Products() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {products.map((product, idx) => (
               <div key={idx} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
-                <div className="bg-gradient-to-br from-accent/10 to-primary/10 h-32 flex items-center justify-center text-5xl border-b border-border">
+                <div className="bg-linear-to-br from-accent/10 to-primary/10 h-32 flex items-center justify-center text-5xl border-b border-border">
                   {product.image}
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col grow">
                   <p className="text-xs font-semibold text-accent uppercase mb-1">{product.category}</p>
                   <h3 className="text-lg font-bold text-primary mb-2">{product.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">{product.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4 grow">{product.description}</p>
                   <div className="space-y-2 mb-6 py-4 border-y border-border">
                     {product.features.map((feature, fidx) => (
                       <p key={fidx} className="text-xs text-muted-foreground">• {feature}</p>

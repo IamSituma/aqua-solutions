@@ -1,15 +1,19 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CheckCircle } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Aqua Solutions International — our mission, team, and commitment to delivering clean water across Uganda.',
+};
+
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col grow">
       <Navigation />
 
-      <main className="flex-grow">
+      <main className="grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -72,7 +76,7 @@ export default function About() {
                 'Full maintenance and support packages',
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4">
-                  <CheckCircle className="text-accent flex-shrink-0 w-6 h-6 mt-0.5" />
+                  <CheckCircle className="text-accent shrink-0 w-6 h-6 mt-0.5" />
                   <span className="text-foreground">{item}</span>
                 </div>
               ))}
@@ -93,7 +97,7 @@ export default function About() {
                 { name: 'Grace Namukasa', role: 'Customer Service Lead' },
               ].map((member, idx) => (
                 <div key={idx} className="bg-card border border-border rounded-lg p-6 text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4"></div>
+                  <div className="w-20 h-20 bg-linear-to-br from-primary to-accent rounded-full mx-auto mb-4"></div>
                   <h3 className="font-semibold text-lg text-primary">{member.name}</h3>
                   <p className="text-sm text-muted-foreground">{member.role}</p>
                 </div>

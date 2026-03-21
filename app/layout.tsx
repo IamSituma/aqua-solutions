@@ -8,25 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Aqua Solutions | Premium Water Treatment Services in Kampala',
-  description: 'Aqua Solutions provides comprehensive water treatment, purification, and supply services in Kampala, Uganda. Premium quality water solutions for residential and commercial needs.',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: {
+    default: 'Aqua Solutions International | Water Treatment Services in Kampala',
+    template: '%s | Aqua Solutions International',
   },
+  description: 'Aqua Solutions International provides comprehensive water treatment, purification, and supply services in Kampala, Uganda.',
 }
 
 export default function RootLayout({

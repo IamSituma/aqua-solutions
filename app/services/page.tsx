@@ -1,8 +1,12 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Droplets, Wrench, Zap, TestTubes, Truck } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Our Services',
+  description: 'Explore the full range of water treatment and supply services offered by Aqua Solutions International in Kampala, Uganda.',
+};
 
 export default function Services() {
   const services = [
@@ -45,10 +49,10 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col grow">
       <Navigation />
 
-      <main className="flex-grow">
+      <main className="grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -107,7 +111,7 @@ export default function Services() {
                   <ul className="space-y-3 mb-6">
                     {pkg.features.map((feature, fidx) => (
                       <li key={fidx} className="flex gap-2">
-                        <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold ${idx === 1 ? 'bg-accent text-primary' : 'bg-accent text-accent-foreground'}`}>✓</span>
+                        <span className={`shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold ${idx === 1 ? 'bg-accent text-primary' : 'bg-accent text-accent-foreground'}`}>✓</span>
                         <span>{feature}</span>
                       </li>
                     ))}
