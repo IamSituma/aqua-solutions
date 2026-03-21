@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground mt-20">
+    <footer className="bg-black text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -23,15 +23,15 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex gap-2">
-                <MapPin size={18} className="flex-shrink-0 mt-0.5" />
+                <MapPin size={18} className="shrink-0 mt-0.5" />
                 <span>Kampala, Uganda</span>
               </li>
               <li className="flex gap-2">
-                <Phone size={18} className="flex-shrink-0 mt-0.5" />
+                <Phone size={18} className="shrink-0 mt-0.5" />
                 <span>+256 (0) 700 000 000</span>
               </li>
               <li className="flex gap-2">
-                <Mail size={18} className="flex-shrink-0 mt-0.5" />
+                <Mail size={18} className="shrink-0 mt-0.5" />
                 <span>info@aquasolutions.ug</span>
               </li>
             </ul>

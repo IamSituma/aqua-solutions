@@ -4,31 +4,106 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
 import { useState } from 'react';
+import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 
 export default function Home() {
   const carouselImages = [
-    { src: 'https://placehold.co/900x500/e0f2fe/0077b6?text=Clean+Drinking+Water', alt: 'Clean drinking water' },
-    { src: 'https://placehold.co/900x500/bae6fd/005f8a?text=Water+Filtration', alt: 'Water filtration' },
-    { src: 'https://placehold.co/900x500/cffafe/0e7490?text=Safe+Water+Supply', alt: 'Safe water supply' },
-    { src: 'https://placehold.co/900x500/dbeafe/1d4ed8?text=Borehole+Water', alt: 'Borehole water' },
-    { src: 'https://placehold.co/900x500/e0f2fe/0077b6?text=Purification+Plant', alt: 'Purification plant' },
-    { src: 'https://placehold.co/900x500/f0f9ff/0369a1?text=Community+Water', alt: 'Community water' },
+    { src: '/borehole water.jpg', alt: 'Borehole water' },
+    { src: '/community.jpg', alt: 'Community water' },
+    { src: '/drinking.jpg', alt: 'Clean drinking water' },
+    { src: '/filtration.jpg', alt: 'Water filtration' },
+    { src: '/purification.jpg', alt: 'Purification plant' },
+    { src: '/safe water.jpg', alt: 'Safe water supply' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const whyItems = [
+    {
+      title: 'Certified & Trusted',
+      description: 'All our systems and installations meet national and international water safety standards, giving you peace of mind.',
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
+          <img src="https://placehold.co/600x300/e0f2fe/0077b6?text=Certified+%26+Trusted" alt="Certified & Trusted" className="w-full h-full object-cover" />
+        </div>
+      ),
+      icon: (
+        <svg className="h-4 w-4 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Fast Installation',
+      description: 'Our experienced teams deliver and install systems quickly with minimal disruption to your home or business.',
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
+          <img src="https://placehold.co/600x300/cffafe/0e7490?text=Fast+Installation" alt="Fast Installation" className="w-full h-full object-cover" />
+        </div>
+      ),
+      icon: (
+        <svg className="h-4 w-4 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+    {
+      title: '24/7 Customer Support',
+      description: 'Our support team is available round the clock to handle maintenance requests, emergencies, and general enquiries.',
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
+          <img src="https://placehold.co/600x300/dbeafe/1d4ed8?text=24%2F7+Support" alt="24/7 Customer Support" className="w-full h-full object-cover" />
+        </div>
+      ),
+      icon: (
+        <svg className="h-4 w-4 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Eco-Friendly Methods',
+      description: 'We use sustainable practices and materials to safeguard Uganda\'s natural resources and protect the environment for future generations.',
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
+          <img src="https://placehold.co/600x300/d1fae5/059669?text=Eco-Friendly+Methods" alt="Eco-Friendly Methods" className="w-full h-full object-cover" />
+        </div>
+      ),
+      icon: (
+        <svg className="h-4 w-4 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Affordable Pricing',
+      description: 'Quality water solutions at competitive prices, with flexible payment options to suit every budget.',
+      header: (
+        <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
+          <img src="https://placehold.co/600x300/e0f2fe/0077b6?text=Affordable+Pricing" alt="Affordable Pricing" className="w-full h-full object-cover" />
+        </div>
+      ),
+      icon: (
+        <svg className="h-4 w-4 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-black sm:pt-40 lg:pt-48 lg:pb-32">
+      <section className="relative py-24 bg-black sm:py-32 lg:py-40">
         {/* Background image */}
         <div className="absolute inset-0">
           <img
             className="object-cover w-full h-full"
-            src="https://cdn.rareblocks.xyz/collection/bakerstreet/images/hero/3/background.png"
-            alt=""
+            src="/sparkling water.jpg"
+            alt="Sparkling Water"
           />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
 
         {/* Content */}
@@ -36,10 +111,10 @@ export default function Home() {
           <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
             <div className="w-full lg:w-2/3 xl:w-1/2">
               <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
-                Clean water for every home
+                Clean Water For Every Home
               </p>
               <p className="mt-12 font-[Inter,sans-serif] text-base font-normal leading-7 text-white/70">
-                Aqua Solutions provides comprehensive water treatment, purification, and supply
+                Aqua Solutions International provides comprehensive water treatment, purification, and supply
                 services across Kampala and Uganda. Reliable, safe, and sustainable water for
                 residential and commercial needs.
               </p>
@@ -83,19 +158,19 @@ export default function Home() {
                 title: 'Water Purification',
                 description:
                   'Advanced filtration and purification systems that remove contaminants, bacteria, and impurities to deliver safe, clean drinking water for homes and businesses.',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=Water+Purification',
+                img: '/water treatment.jpg',
               },
               {
                 title: 'Borehole Drilling',
                 description:
                   'Professional borehole drilling services to access underground water sources. We handle site assessment, drilling, casing, and pump installation from start to finish.',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=Borehole+Drilling',
+                img: '/borehole.jpg',
               },
               {
                 title: 'Water Treatment Systems',
                 description:
                   'Installation and maintenance of commercial and residential water treatment systems including reverse osmosis, UV sterilisation, and softening units.',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=Treatment+Systems',
+                img: '/water treatment system.jpg',
               },
             ].map((service) => (
               <div key={service.title} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
@@ -131,10 +206,10 @@ export default function Home() {
             {/* Left: text */}
             <div className="flex flex-col justify-center">
               <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6">
-                Safe &amp; clean water for healthier communities
+                Safe &amp; Clean Water For Healthier Communities
               </h2>
               <p className="text-gray-600 text-base leading-7 mb-4">
-                Access to clean water is a fundamental human right. At Aqua Solutions, we work every day to bring safe, purified water to homes, schools, and businesses across Kampala and Uganda.
+                Access to clean water is a fundamental human right. At Aqua Solutions International, we work every day to bring safe, purified water to homes, schools, and businesses across Kampala and Uganda.
               </p>
               <p className="text-gray-600 text-base leading-7 mb-8">
                 Our systems are designed for reliability and long-term sustainability — because clean water isn't a luxury, it's a necessity. From borehole drilling to advanced filtration, we deliver end-to-end water solutions trusted by thousands of families.
@@ -151,15 +226,26 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/about"
-                className="w-fit inline-flex items-center gap-1 text-sm font-semibold text-[#0077b6] border border-[#0077b6] px-5 py-2.5 rounded-md hover:bg-[#0077b6] hover:text-white transition-colors"
-              >
-                Learn about us
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              <div className="flex items-center gap-3 flex-wrap">
+                <Link
+                  href="/about"
+                  className="w-fit inline-flex items-center gap-1 text-sm font-semibold text-[#0077b6] border border-[#0077b6] px-5 py-2.5 rounded-md hover:bg-[#0077b6] hover:text-white transition-colors"
+                >
+                  Learn about us
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="w-fit inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#0077b6] border border-[#0077b6] px-5 py-2.5 rounded-md hover:bg-black hover:border-black transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Contact us
+                </Link>
+              </div>
             </div>
 
             {/* Right: main image + thumbnail carousel */}
@@ -193,6 +279,336 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-16 bg-white sm:py-20">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <div className="flex items-center justify-between mb-10">
+            <h2 className="text-3xl font-bold text-black tracking-tight">Our Products</h2>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-1 text-sm font-medium text-[#0077b6] border border-[#0077b6] px-4 py-2 rounded-md hover:bg-[#0077b6] hover:text-white transition-colors"
+            >
+              View all products
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Domestic Water Filter',
+                description: 'Compact under-sink or countertop filter for home use. Removes chlorine, sediment, and heavy metals for clean, great-tasting drinking water.',
+                price: 'UGX 350,000',
+                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=Domestic+Filter',
+                message: 'Hello! I am interested in the Domestic Water Filter. Please send me more details.',
+              },
+              {
+                title: 'Reverse Osmosis System',
+                description: 'Advanced 5-stage RO system for homes and offices. Delivers up to 99% purification, removing bacteria, dissolved solids, and contaminants.',
+                price: 'UGX 1,200,000',
+                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=RO+System',
+                message: 'Hello! I am interested in the Reverse Osmosis System. Please send me more details.',
+              },
+              {
+                title: 'UV Water Steriliser',
+                description: 'Ultraviolet sterilisation unit that eliminates 99.9% of bacteria, viruses, and pathogens without chemicals. Ideal for boreholes and tanks.',
+                price: 'UGX 780,000',
+                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=UV+Steriliser',
+                message: 'Hello! I am interested in the UV Water Steriliser. Please send me more details.',
+              },
+            ].map((product) => {
+              const waNumber = '256700000000';
+              const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(product.message)}`;
+              return (
+                <div key={product.title} className="rounded-lg overflow-hidden border border-gray-200 bg-white">
+                  <img
+                    src={product.img}
+                    alt={product.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-black mb-1">{product.title}</h3>
+                    <p className="text-sm font-medium text-[#0077b6] mb-3">{product.price}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-5">{product.description}</p>
+                    <div className="flex items-center gap-3">
+                      <Link
+                        href="/products"
+                        className="group inline-flex items-center gap-1 text-sm font-medium text-black hover:text-[#0077b6] transition-colors w-fit"
+                      >
+                        More details
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                      <a
+                        href={waLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#25D366] px-4 py-1.5 rounded-md hover:bg-[#1ebe5d] transition-colors"
+                      >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.847L.057 23.882a.5.5 0 00.611.612l6.088-1.456A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.892a9.877 9.877 0 01-5.032-1.378l-.36-.214-3.733.893.912-3.65-.235-.375A9.856 9.856 0 012.108 12C2.108 6.533 6.533 2.108 12 2.108S21.892 6.533 21.892 12 17.467 21.892 12 21.892z"/>
+                        </svg>
+                        Buy now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gray-50 sm:py-20">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight">Why choose Aqua Solutions?</h2>
+            <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7">
+              We combine local expertise with world-class technology to deliver water solutions that are safe, reliable, and built to last.
+            </p>
+          </div>
+          <BentoGrid className="max-w-7xl mx-auto">
+            {whyItems.map((item, i) => (
+              <BentoGridItem
+                key={i}
+                title={item.title}
+                description={item.description}
+                header={item.header}
+                icon={item.icon}
+                className={i === 3 ? 'md:col-span-2' : ''}
+              />
+            ))}
+          </BentoGrid>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <div className="bg-gray-900">
+        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+            <svg
+              viewBox="0 0 1024 1024"
+              aria-hidden="true"
+              className="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+            >
+              <circle r={512} cx={512} cy={512} fill="url(#aqua-cta-gradient)" fillOpacity="0.7" />
+              <defs>
+                <radialGradient id="aqua-cta-gradient">
+                  <stop stopColor="#0077b6" />
+                  <stop offset={1} stopColor="#00b4d8" />
+                </radialGradient>
+              </defs>
+            </svg>
+            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+              <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl font-[Inter,sans-serif]">
+                Ready for clean, safe water in your home or business?
+              </h2>
+              <p className="mt-6 text-lg/8 text-pretty text-gray-300 font-[Inter,sans-serif]">
+                Get in touch with our team today for a free consultation and quote. We serve homes, schools, hospitals, and businesses across Kampala and Uganda.
+              </p>
+              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                <Link
+                  href="/contact"
+                  className="rounded-md bg-[#0077b6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#005f8a] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-[Inter,sans-serif]"
+                >
+                  Get a Free Quote
+                </Link>
+                <Link href="/services" className="text-sm font-semibold text-white hover:text-gray-100 font-[Inter,sans-serif]">
+                  Explore Services <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </div>
+            <div className="relative mt-16 h-80 lg:mt-8">
+              <img
+                alt="Aqua Solutions water treatment"
+                src="https://placehold.co/1824x1080/0077b6/ffffff?text=Aqua+Solutions"
+                width={1824}
+                height={1080}
+                className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Clean Water Article Section */}
+      <section className="py-16 bg-white sm:py-20">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+            {/* Image */}
+            <div className="rounded-2xl overflow-hidden shadow-md self-stretch">
+              <img
+                src="https://placehold.co/900x600/e0f2fe/0077b6?text=Clean+Safe+Water"
+                alt="Clean and safe water"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Article text */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6 font-[Inter,sans-serif]">
+                Why Clean & Safe Water Matters
+              </h2>
+              <div className="space-y-4 text-gray-600 text-base leading-7 font-[Inter,sans-serif]">
+                <p>
+                  Water is the foundation of life. Every cell in the human body depends on it — for digestion, circulation, temperature regulation, and the removal of waste. Yet millions of people still lack reliable access to water that is truly clean and safe to drink.
+                </p>
+                <p>
+                  Contaminated water carries bacteria, viruses, heavy metals, and dissolved chemicals that cause illnesses ranging from cholera and typhoid to long-term kidney damage and developmental problems in children. In Uganda, waterborne diseases remain one of the leading causes of preventable illness and death.
+                </p>
+                <p>
+                  Investing in a proper water treatment system is not just a convenience — it is a decision that protects your family's health, reduces medical costs, and improves quality of life every single day. Clean water means healthier children, more productive adults, and stronger communities.
+                </p>
+                <p>
+                  At Aqua Solutions, we believe every household and business deserves access to water they can trust. Our systems are engineered to remove contaminants at every level, giving you peace of mind with every glass.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#0077b6] px-6 py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
+              >
+                Get clean water today
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-14 bg-gray-50 border-t border-gray-100">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10 font-[Inter,sans-serif]">
+            Trusted partners & certifications
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            {[
+              { name: 'WHO', label: 'World Health\nOrganization' },
+              { name: 'NWSC', label: 'National Water &\nSewerage Corp' },
+              { name: 'UNBS', label: 'Uganda National\nBureau of Standards' },
+              { name: 'ISO', label: 'ISO 9001\nCertified' },
+              { name: 'NSF', label: 'NSF\nInternational' },
+              { name: 'MEMD', label: 'Ministry of Energy\n& Mineral Dev.' },
+            ].map((partner) => (
+              <div key={partner.name} className="flex flex-col items-center gap-2 group">
+                <div className="w-20 h-20 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
+                  <span className="text-lg font-extrabold text-[#0077b6] font-[Inter,sans-serif]">{partner.name}</span>
+                </div>
+                <p className="text-xs text-gray-400 text-center leading-tight font-[Inter,sans-serif] whitespace-pre-line">{partner.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 bg-white sm:py-20">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight font-[Inter,sans-serif]">We&apos;re Here to Help</h2>
+            <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7 font-[Inter,sans-serif]">
+              Whether it&apos;s a question about our services, a request for technical assistance, or suggestions for improvement, our team is eager to hear from you.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Map */}
+            <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 h-full min-h-100">
+              <iframe
+                src="https://maps.google.com/maps?q=Kawempe+Police+Station,+Mbogo+Road,+Kampala,+Uganda&output=embed"
+                width="100%"
+                height="100%"
+                style={{ minHeight: '400px', border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Aqua Solutions location"
+              />
+            </div>
+            {/* Form */}
+            <form className="flex flex-col gap-5">
+              <div className="flex gap-3 flex-wrap">
+                <button
+                  type="button"
+                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                >
+                  General Inquiry
+                </button>
+                <button
+                  type="button"
+                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                >
+                  Product Support
+                </button>
+                <button
+                  type="button"
+                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                >
+                  Get a Quote
+                </button>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">First Name</label>
+                  <input
+                    type="text"
+                    name="first-name"
+                    placeholder="First Name"
+                    className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Last Name</label>
+                  <input
+                    type="text"
+                    name="last-name"
+                    placeholder="Last Name"
+                    className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="name@email.com"
+                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="+256 700 000 000"
+                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Message</label>
+                <textarea
+                  name="message"
+                  rows={5}
+                  placeholder="Tell us how we can help..."
+                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent resize-none font-[Inter,sans-serif]"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#0077b6] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
