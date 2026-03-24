@@ -10,18 +10,33 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col grow">
+    <div className="min-h-screen flex flex-col grow bg-white">
       <Navigation />
+
+      {/* Hero Section with full-width background image */}
+      <section
+        className="relative w-full bg-white min-h-137.5 sm:min-h-112.5 flex items-center justify-center"
+        style={{ minHeight: '550px' }}
+      >
+        <img
+          src="/about-hero.jpg"
+          alt="About Aqua Solutions Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          style={{ zIndex: 0 }}
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+            <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+              About Us
+            </p>
+          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+            Leading provider of water treatment and supply solutions in Kampala, Uganda since 2015
+          </p>
+        </div>
+      </section>
 
       <main className="grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">About Aqua Solutions</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Leading provider of water treatment and supply solutions in Kampala, Uganda since 2015
-            </p>
-          </div>
 
           {/* Mission Vision Values */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">

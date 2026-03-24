@@ -58,37 +58,36 @@ export default function Products() {
       features: ['Natural minerals', 'pH balanced', '6-month lifespan', 'Easy replacement'],
       image: '⛰️',
     },
-    {
-      name: 'Smart Water Monitor',
-      category: 'Smart Technology',
-      price: 'UGX 320,000',
-      description: 'IoT-enabled device to monitor water quality in real-time via your phone.',
-      features: ['Mobile app control', 'Real-time alerts', 'Water quality dashboard', 'WiFi enabled'],
-      image: '📱',
-    },
-    {
-      name: 'Installation Service Package',
-      category: 'Services',
-      price: 'UGX 200,000',
-      description: 'Professional installation service for any water treatment system.',
-      features: ['Expert technicians', 'System testing', 'Warranty included', 'Same-day service available'],
-      image: '🔧',
-    },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
+
+      {/* Hero Section with full-width background image */}
+        <section
+          className="relative w-full bg-white min-h-[550px] sm:min-h-[450px] flex items-center justify-center"
+          style={{ minHeight: '550px' }}
+        >
+        <img
+          src="/products-hero.jpg"
+          alt="Our Products Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          style={{ zIndex: 0 }}
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+            Our Products
+          </p>
+          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+            High-quality water treatment products and equipment for residential and commercial use
+          </p>
+        </div>
+      </section>
 
       <main className="grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">Our Products</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              High-quality water treatment products and equipment for residential and commercial use
-            </p>
-          </div>
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

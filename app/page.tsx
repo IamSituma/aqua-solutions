@@ -390,6 +390,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clean Water Article Section */}
+      <section className="py-16 bg-white sm:py-20">
+        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+            {/* Image */}
+            <div className="rounded-2xl overflow-hidden shadow-md self-stretch">
+              <img
+                src="https://placehold.co/900x600/e0f2fe/0077b6?text=Clean+Safe+Water"
+                alt="Clean and safe water"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Article text */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6 font-[Inter,sans-serif]">
+                Why Clean & Safe Water Matters
+              </h2>
+              <div className="space-y-4 text-gray-600 text-base leading-7 font-[Inter,sans-serif]">
+                <p>
+                  Water is the foundation of life. Every cell in the human body depends on it — for digestion, circulation, temperature regulation, and the removal of waste. Yet millions of people still lack reliable access to water that is truly clean and safe to drink.
+                </p>
+                <p>
+                  Contaminated water carries bacteria, viruses, heavy metals, and dissolved chemicals that cause illnesses ranging from cholera and typhoid to long-term kidney damage and developmental problems in children. In Uganda, waterborne diseases remain one of the leading causes of preventable illness and death.
+                </p>
+                <p>
+                  Investing in a proper water treatment system is not just a convenience — it is a decision that protects your family's health, reduces medical costs, and improves quality of life every single day. Clean water means healthier children, more productive adults, and stronger communities.
+                </p>
+                <p>
+                  At Aqua Solutions, we believe every household and business deserves access to water they can trust. Our systems are engineered to remove contaminants at every level, giving you peace of mind with every glass.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#0077b6] px-6 py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
+              >
+                Get clean water today
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* CTA Section */}
       <div className="bg-gray-900">
         <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -439,179 +485,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Clean Water Article Section */}
-      <section className="py-16 bg-white sm:py-20">
-        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-            {/* Image */}
-            <div className="rounded-2xl overflow-hidden shadow-md self-stretch">
-              <img
-                src="https://placehold.co/900x600/e0f2fe/0077b6?text=Clean+Safe+Water"
-                alt="Clean and safe water"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Article text */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6 font-[Inter,sans-serif]">
-                Why Clean & Safe Water Matters
-              </h2>
-              <div className="space-y-4 text-gray-600 text-base leading-7 font-[Inter,sans-serif]">
-                <p>
-                  Water is the foundation of life. Every cell in the human body depends on it — for digestion, circulation, temperature regulation, and the removal of waste. Yet millions of people still lack reliable access to water that is truly clean and safe to drink.
-                </p>
-                <p>
-                  Contaminated water carries bacteria, viruses, heavy metals, and dissolved chemicals that cause illnesses ranging from cholera and typhoid to long-term kidney damage and developmental problems in children. In Uganda, waterborne diseases remain one of the leading causes of preventable illness and death.
-                </p>
-                <p>
-                  Investing in a proper water treatment system is not just a convenience — it is a decision that protects your family's health, reduces medical costs, and improves quality of life every single day. Clean water means healthier children, more productive adults, and stronger communities.
-                </p>
-                <p>
-                  At Aqua Solutions, we believe every household and business deserves access to water they can trust. Our systems are engineered to remove contaminants at every level, giving you peace of mind with every glass.
-                </p>
-              </div>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#0077b6] px-6 py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
-              >
-                Get clean water today
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-14 bg-gray-50 border-t border-gray-100">
-        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-          <p className="text-center text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10 font-[Inter,sans-serif]">
-            Trusted partners & certifications
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {[
-              { name: 'WHO', label: 'World Health\nOrganization' },
-              { name: 'NWSC', label: 'National Water &\nSewerage Corp' },
-              { name: 'UNBS', label: 'Uganda National\nBureau of Standards' },
-              { name: 'ISO', label: 'ISO 9001\nCertified' },
-              { name: 'NSF', label: 'NSF\nInternational' },
-              { name: 'MEMD', label: 'Ministry of Energy\n& Mineral Dev.' },
-            ].map((partner) => (
-              <div key={partner.name} className="flex flex-col items-center gap-2 group">
-                <div className="w-20 h-20 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center group-hover:shadow-md transition-shadow">
-                  <span className="text-lg font-extrabold text-[#0077b6] font-[Inter,sans-serif]">{partner.name}</span>
-                </div>
-                <p className="text-xs text-gray-400 text-center leading-tight font-[Inter,sans-serif] whitespace-pre-line">{partner.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 bg-white sm:py-20">
-        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight font-[Inter,sans-serif]">We&apos;re Here to Help</h2>
-            <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7 font-[Inter,sans-serif]">
-              Whether it&apos;s a question about our services, a request for technical assistance, or suggestions for improvement, our team is eager to hear from you.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Map */}
-            <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 h-full min-h-100">
-              <iframe
-                src="https://maps.google.com/maps?q=Kawempe+Police+Station,+Mbogo+Road,+Kampala,+Uganda&output=embed"
-                width="100%"
-                height="100%"
-                style={{ minHeight: '400px', border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Aqua Solutions location"
-              />
-            </div>
-            {/* Form */}
-            <form className="flex flex-col gap-5">
-              <div className="flex gap-3 flex-wrap">
-                <button
-                  type="button"
-                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
-                >
-                  General Inquiry
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
-                >
-                  Product Support
-                </button>
-                <button
-                  type="button"
-                  className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
-                >
-                  Get a Quote
-                </button>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">First Name</label>
-                  <input
-                    type="text"
-                    name="first-name"
-                    placeholder="First Name"
-                    className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Last Name</label>
-                  <input
-                    type="text"
-                    name="last-name"
-                    placeholder="Last Name"
-                    className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="name@email.com"
-                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Phone Number</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="+256 700 000 000"
-                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Message</label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Tell us how we can help..."
-                  className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent resize-none font-[Inter,sans-serif]"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-[#0077b6] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      
+      {/* Contact Form Section removed from landing page. */}
 
       <Footer />
     </div>

@@ -18,7 +18,7 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev: typeof formData) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -33,170 +33,136 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
-      <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary mb-6">Get in Touch</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Have questions? Our team is ready to help. Contact us today for more information about our services and products.
+      {/* Hero Section with full-width background image */}
+        <section
+          className="relative w-full bg-white min-h-[550px] sm:min-h-[450px] flex items-center justify-center"
+          style={{ minHeight: '550px' }}
+        >
+        <img
+          src="/contact-hero.jpg"
+          alt="Contact Us Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          style={{ zIndex: 0 }}
+        />
+        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+            <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+              Contact Us
             </p>
-          </div>
+          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+            Reach out to our team for questions, support, or a free quote. We're here to help you with all your water needs.
+          </p>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="flex gap-4">
-                  <MapPin className="text-accent flex-shrink-0 w-6 h-6 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg text-primary mb-2">Location</h3>
-                    <p className="text-muted-foreground">
-                      Kampala, Uganda<br />
-                      East Africa
-                    </p>
-                  </div>
-                </div>
+      <main className="grow">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+          {/* Contact Form Section (moved from landing page) */}
+          <section className="py-16 bg-white sm:py-20">
+            <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight font-[Inter,sans-serif]">We&apos;re Here to Help</h2>
+                <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7 font-[Inter,sans-serif]">
+                  Whether it&apos;s a question about our services, a request for technical assistance, or suggestions for improvement, our team is eager to hear from you.
+                </p>
               </div>
-
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="flex gap-4">
-                  <Phone className="text-accent flex-shrink-0 w-6 h-6 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg text-primary mb-2">Phone</h3>
-                    <p className="text-muted-foreground">
-                      <a href="tel:+256700000000" className="hover:text-primary transition-colors">+256 (0) 700 000 000</a><br />
-                      <a href="tel:+256785000000" className="hover:text-primary transition-colors">+256 (0) 785 000 000</a>
-                    </p>
-                  </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                {/* Map */}
+                <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 h-full min-h-100">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Kawempe+Police+Station,+Mbogo+Road,+Kampala,+Uganda&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ minHeight: '400px', border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Aqua Solutions location"
+                  />
                 </div>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="flex gap-4">
-                  <Mail className="text-accent flex-shrink-0 w-6 h-6 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg text-primary mb-2">Email</h3>
-                    <p className="text-muted-foreground">
-                      <a href="mailto:info@aquasolutions.ug" className="hover:text-primary transition-colors">info@aquasolutions.ug</a><br />
-                      <a href="mailto:support@aquasolutions.ug" className="hover:text-primary transition-colors">support@aquasolutions.ug</a>
-                    </p>
+                {/* Form */}
+                <form className="flex flex-col gap-5">
+                  <div className="flex gap-3 flex-wrap">
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                    >
+                      General Inquiry
+                    </button>
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                    >
+                      Product Support
+                    </button>
+                    <button
+                      type="button"
+                      className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md text-gray-700 hover:border-[#0077b6] hover:text-[#0077b6] transition-colors font-[Inter,sans-serif]"
+                    >
+                      Get a Quote
+                    </button>
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-card border border-border rounded-lg p-6">
-                <div className="flex gap-4">
-                  <Clock className="text-accent flex-shrink-0 w-6 h-6 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg text-primary mb-2">Business Hours</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Monday - Friday: 8:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 4:00 PM<br />
-                      Sunday: Closed<br />
-                      <span className="font-semibold text-primary block mt-2">Emergency: 24/7 Available</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-card border border-border rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-primary mb-6">Send us a Message</h2>
-                
-                {submitted && (
-                  <div className="bg-accent/20 border border-accent text-accent-foreground p-4 rounded-lg mb-6">
-                    Thank you! We've received your message and will get back to you shortly.
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">Full Name</label>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">First Name</label>
                       <input
                         type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
-                        placeholder="John Doe"
+                        name="first-name"
+                        placeholder="First Name"
+                        className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">Email Address</label>
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Last Name</label>
                       <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
-                        placeholder="john@example.com"
+                        type="text"
+                        name="last-name"
+                        placeholder="Last Name"
+                        className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
                       />
                     </div>
                   </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">Phone Number</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
-                        placeholder="+256 700 000 000"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-foreground mb-2">Service Interested In</label>
-                      <select
-                        name="service"
-                        value={formData.service}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
-                      >
-                        <option value="">Select a service</option>
-                        <option value="purification">Water Purification</option>
-                        <option value="delivery">Water Delivery</option>
-                        <option value="installation">System Installation</option>
-                        <option value="testing">Water Testing</option>
-                        <option value="maintenance">Maintenance & Support</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="name@email.com"
+                      className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                    />
                   </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">Message</label>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+256 700 000 000"
+                      className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent font-[Inter,sans-serif]"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-sm font-medium text-gray-900 font-[Inter,sans-serif]">Your Message</label>
                     <textarea
                       name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
                       rows={5}
-                      className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground resize-none"
-                      placeholder="Tell us about your water needs..."
-                    ></textarea>
+                      placeholder="Tell us how we can help..."
+                      className="w-full rounded-md border border-gray-300 px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0077b6] focus:border-transparent resize-none font-[Inter,sans-serif]"
+                    />
                   </div>
-
                   <button
                     type="submit"
-                    className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                    className="w-full bg-[#0077b6] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
                   >
                     Send Message
                   </button>
                 </form>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* FAQ */}
           <div className="mb-16">
