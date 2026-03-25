@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { ShoppingCart } from 'lucide-react';
+import { CtaSection } from '@/components/cta-section';
 
 type Category = 'All' | 'MT' | 'PT' | 'CL';
 
@@ -102,7 +103,7 @@ export default function Products() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full bg-white min-h-[550px] sm:min-h-[450px] flex items-center justify-center"
+        className="relative w-full bg-white min-h-137.5 sm:min-h-112.5 flex items-center justify-center"
         style={{ minHeight: '550px' }}
       >
         <img
@@ -125,11 +126,11 @@ export default function Products() {
       <section className="w-full bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="w-full md:w-1/2 flex-shrink-0">
+            <div className="w-full md:w-1/2 shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=1200&auto=format&fit=crop"
                 alt="Water testing equipment"
-                className="w-full h-80 md:h-[26rem] object-cover rounded-lg shadow-md"
+                className="w-full h-80 md:h-104 object-cover rounded-lg shadow-md"
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col gap-6">
@@ -276,6 +277,7 @@ export default function Products() {
         </div>
       </section>
 
+      <CtaSection />
       <Footer />
     </div>
   );

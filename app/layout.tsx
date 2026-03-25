@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { HeroUIProvider } from '@heroui/system'
+import { CookieConsentBanner } from '@/components/cookie-consent'
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
         <HeroUIProvider>
           {children}
           <Analytics />
+          <CookieConsentBanner />
         </HeroUIProvider>
       </body>
     </html>
