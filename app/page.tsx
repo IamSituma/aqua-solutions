@@ -390,51 +390,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clean Water Article Section */}
-      <section className="py-16 bg-white sm:py-20">
-        <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
-            {/* Image */}
-            <div className="rounded-2xl overflow-hidden shadow-md self-stretch">
-              <img
-                src="https://placehold.co/900x600/e0f2fe/0077b6?text=Clean+Safe+Water"
-                alt="Clean and safe water"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Article text */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6 font-[Inter,sans-serif]">
-                Why Clean & Safe Water Matters
-              </h2>
-              <div className="space-y-4 text-gray-600 text-base leading-7 font-[Inter,sans-serif]">
-                <p>
-                  Water is the foundation of life. Every cell in the human body depends on it — for digestion, circulation, temperature regulation, and the removal of waste. Yet millions of people still lack reliable access to water that is truly clean and safe to drink.
-                </p>
-                <p>
-                  Contaminated water carries bacteria, viruses, heavy metals, and dissolved chemicals that cause illnesses ranging from cholera and typhoid to long-term kidney damage and developmental problems in children. In Uganda, waterborne diseases remain one of the leading causes of preventable illness and death.
-                </p>
-                <p>
-                  Investing in a proper water treatment system is not just a convenience — it is a decision that protects your family's health, reduces medical costs, and improves quality of life every single day. Clean water means healthier children, more productive adults, and stronger communities.
-                </p>
-                <p>
-                  At Aqua Solutions, we believe every household and business deserves access to water they can trust. Our systems are engineered to remove contaminants at every level, giving you peace of mind with every glass.
-                </p>
-              </div>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#0077b6] px-6 py-3 rounded-md hover:bg-[#005f8a] transition-colors font-[Inter,sans-serif]"
-              >
-                Get clean water today
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
 
       {/* CTA Section */}
       <div className="bg-gray-900">
