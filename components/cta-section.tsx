@@ -37,13 +37,13 @@ export function CtaSection() {
               </Link>
             </div>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8">
+          <div className="relative mt-16 lg:mt-8 flex justify-center lg:block lg:w-auto">
             <img
               alt="Aqua Solutions water treatment"
               src="https://placehold.co/1824x1080/0077b6/ffffff?text=Aqua+Solutions"
               width={1824}
               height={1080}
-              className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+              className="w-auto max-w-full rounded-md bg-white/5 ring-1 ring-white/10 lg:absolute lg:top-0 lg:left-0 lg:w-228 lg:max-w-none"
             />
           </div>
         </div>

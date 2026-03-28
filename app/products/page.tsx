@@ -103,20 +103,19 @@ export default function Products() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full bg-white min-h-137.5 sm:min-h-112.5 flex items-center justify-center"
-        style={{ minHeight: '550px' }}
+        className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center"
       >
         <img
-          src="/products-hero.jpg"
+          src="/filtration.jpg"
           alt="Our Products Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-10 sm:py-28 px-4 sm:px-6 lg:px-8">
+          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
             Our Products
           </p>
-          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+          <p className="text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
             High-quality water testing and treatment equipment for field, laboratory, and remote applications
           </p>
         </div>
@@ -134,7 +133,7 @@ export default function Products() {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col gap-6">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-snug font-[Inter,sans-serif]">
+              <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-snug font-[Inter,sans-serif]">
                 Lasting solutions made in Germany
               </h2>
               <p className="text-base text-gray-600 leading-7 font-[Inter,sans-serif]">
@@ -216,7 +215,7 @@ export default function Products() {
 
           {/* CTA */}
           <div className="bg-gray-50 rounded-xl p-12 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-[Inter,sans-serif]">Need a Custom Solution?</h2>
+            <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-4 font-[Inter,sans-serif]">Need a Custom Solution?</h2>
             <p className="text-base text-gray-500 mb-6 font-[Inter,sans-serif]">
               Our product specialists are ready to recommend the perfect solution for your needs
             </p>
@@ -231,7 +230,7 @@ export default function Products() {
       {/* Why Our Products Section */}
       <section className="py-16 bg-gray-50 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center font-[Inter,sans-serif]">
+          <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-4 text-center font-[Inter,sans-serif]">
             Why professionals trust our products
           </h2>
           <p className="text-center text-gray-500 mb-10 max-w-2xl mx-auto font-[Inter,sans-serif]">

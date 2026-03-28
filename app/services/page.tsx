@@ -158,20 +158,19 @@ export default function Services() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full bg-white flex items-center justify-center"
-        style={{ minHeight: '550px' }}
+        className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center"
       >
         <img
-          src="/services-hero.jpg"
+          src="/water treatment.jpg"
           alt="Our Services Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-10 sm:py-28 px-4 sm:px-6 lg:px-8">
+          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
             Our Services
           </p>
-          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+          <p className="text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
             Comprehensive water solutions tailored to meet the needs of homes, businesses, and communities across Kampala
           </p>
         </div>
@@ -192,7 +191,7 @@ export default function Services() {
               >
                 {/* Carousel */}
                 <div className="w-full md:w-1/2 shrink-0">
-                  <div className="relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100 shadow-md">
+                  <div className="relative overflow-hidden rounded-xl aspect-4/3 bg-gray-100 shadow-md">
                     {service.images.map((src, imgIdx) => (
                       <img
                         key={imgIdx}
@@ -241,7 +240,7 @@ export default function Services() {
                   <span className="text-xs font-bold uppercase tracking-wider text-[#0077b6] font-[Inter,sans-serif]">
                     Service {String(idx + 1).padStart(2, '0')}
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight leading-snug font-[Inter,sans-serif]">
+                  <h2 className="text-xl sm:text-3xl font-bold text-gray-900 tracking-tight leading-snug font-[Inter,sans-serif]">
                     {service.title}
                   </h2>
                   <p className="text-base text-gray-600 leading-7 font-[Inter,sans-serif]">

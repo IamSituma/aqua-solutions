@@ -30,21 +30,20 @@ export default function About() {
 
       {/* Hero Section with full-width background image */}
       <section
-        className="relative w-full bg-white min-h-137.5 sm:min-h-112.5 flex items-center justify-center"
-        style={{ minHeight: '550px' }}
+        className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center"
       >
         <img
-          src="/about-hero.jpg"
+          src="/community.jpg"
           alt="About Aqua Solutions Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           style={{ zIndex: 0 }}
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-10 sm:py-28 px-4 sm:px-6 lg:px-8">
+          <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
             About Us
           </p>
-          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+          <p className="text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
             Leading provider of water treatment and supply solutions in Kampala, Uganda since 2015
           </p>
         </div>
@@ -57,7 +56,7 @@ export default function About() {
             {/* Image on the left */}
             <div className="w-full md:w-1/2 shrink-0">
               <img
-                src="/about-vision.jpg"
+                src="/clean water.jpg"
                 alt="Aqua Solutions Vision"
                 className="w-full h-100 md:h-128 object-cover rounded-lg shadow-md border border-gray-200"
               />
@@ -91,7 +90,7 @@ export default function About() {
 
             {/* Left: text */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6">
+              <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6">
                 Our Story
               </h2>
               <p className="text-gray-600 text-base leading-7 mb-4">
@@ -164,7 +163,7 @@ export default function About() {
       <section className="py-20 bg-white w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-3">
               Our Gallery
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
@@ -172,7 +171,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="h-[750px] w-full">
+        <div className="h-187.5 w-full">
           <LayoutGrid cards={aboutGridCards} />
         </div>
       </section>
@@ -180,7 +179,7 @@ export default function About() {
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-primary mb-4 text-center">Why Communities Trust Us</h2>
+            <h2 className="text-xl sm:text-3xl font-bold text-primary mb-4 text-center">Why Communities Trust Us</h2>
             <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
               From advanced technology to round-the-clock support, here's what sets Aqua Solutions apart.
             </p>
@@ -202,7 +201,7 @@ export default function About() {
                   description: 'Round-the-clock emergency response and maintenance to keep your water flowing.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1542601906897-62563aa791b5?q=80&w=800&auto=format&fit=crop',
+                  image: '/purification.jpg',
                   title: 'Eco-Friendly Methods',
                   description: "Sustainable, environmentally responsible practices that protect Uganda's natural resources.",
                 },
@@ -212,7 +211,7 @@ export default function About() {
                   description: 'Transparent, competitive pricing with flexible packages suited for every budget.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c76?q=80&w=800&auto=format&fit=crop',
+                  image: '/safe water.jpg',
                   title: 'Water Testing',
                   description: 'Comprehensive on-site and lab water quality testing to ensure safety at every stage.',
                 },
@@ -248,7 +247,7 @@ export default function About() {
 
           {/* Team Section */}
           <div>
-            <h2 className="text-3xl font-bold text-primary mb-4 text-center">Our Team</h2>
+            <h2 className="text-xl sm:text-3xl font-bold text-primary mb-4 text-center">Our Team</h2>
             <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
               Our dedicated team of water quality experts, engineers, and customer service professionals are committed to delivering excellence every day.
             </p>
@@ -256,23 +255,23 @@ export default function About() {
               {[
                 {
                   image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop',
-                  name: 'James Mutebi',
-                  role: 'Chief Executive Officer',
+                  name: 'Dr. Jacintha Nayebare',
+                  role: 'Director of Research and Development',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
-                  name: 'Dr. Sarah Omondi',
-                  role: 'Chief Technical Officer',
+                  name: 'Claire Kowalewski',
+                  role: 'Water Scientist',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop',
-                  name: 'David Kasigwa',
-                  role: 'Operations Manager',
+                  name: 'Janepher Turinawe',
+                  role: 'Director and Chief Laboratory Technician',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop',
-                  name: 'Grace Namukasa',
-                  role: 'Customer Service Lead',
+                  name: 'Claire Natukunda',
+                  role: 'Director at Aqua Solutions International Limited',
                 },
               ].map((member, idx) => (
                 <div key={idx} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
@@ -310,7 +309,7 @@ export default function About() {
               </defs>
             </svg>
             <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl font-[Inter,sans-serif]">
+              <h2 className="text-2xl font-semibold tracking-tight text-balance text-white sm:text-4xl font-[Inter,sans-serif]">
                 Ready for clean, safe water in your home or business?
               </h2>
               <p className="mt-6 text-lg/8 text-pretty text-gray-300 font-[Inter,sans-serif]">

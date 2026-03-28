@@ -96,7 +96,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-24 bg-black sm:py-32 lg:py-40">
+      <section className="relative py-16 bg-black sm:py-32 lg:py-40">
         {/* Background image */}
         <div className="absolute inset-0">
           <img
@@ -111,24 +111,24 @@ export default function Home() {
         <div className="relative">
           <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
             <div className="w-full lg:w-2/3 xl:w-1/2">
-              <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+              <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
                 Clean Water For Every Home
               </p>
-              <p className="mt-12 font-[Inter,sans-serif] text-base font-normal leading-7 text-white/70">
+              <p className="mt-6 sm:mt-12 font-[Inter,sans-serif] text-sm sm:text-base font-normal leading-7 text-white/70">
                 Aqua Solutions International provides comprehensive water treatment, purification, and supply
                 services across Kampala and Uganda. Reliable, safe, and sustainable water for
                 residential and commercial needs.
               </p>
-              <div className="flex items-center mt-5 space-x-3 sm:space-x-4">
+              <div className="flex items-center mt-5 space-x-2 sm:space-x-4">
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center px-6 py-2.5 font-[Inter,sans-serif] text-base font-semibold transition-all duration-200 rounded-md bg-white text-black hover:bg-gray-100"
+                  className="inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-2.5 font-[Inter,sans-serif] text-sm sm:text-base font-semibold transition-all duration-200 rounded-md bg-white text-black hover:bg-gray-100"
                 >
                   Explore Services
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-2.5 font-[Inter,sans-serif] text-base font-semibold transition-all duration-200 rounded-md border-2 border-white text-white hover:bg-white hover:text-black"
+                  className="inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-2.5 font-[Inter,sans-serif] text-sm sm:text-base font-semibold transition-all duration-200 rounded-md border-2 border-white text-white hover:bg-white hover:text-black"
                 >
                   Get a Quotation
                 </Link>
@@ -142,7 +142,7 @@ export default function Home() {
       <section className="py-16 bg-white sm:py-20">
         <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
           <div className="flex items-center justify-between mb-10">
-            <h2 className="text-3xl font-bold text-black tracking-tight">Services We Offer</h2>
+            <h2 className="text-xl sm:text-3xl font-bold text-black tracking-tight">Services We Offer</h2>
             <Link
               href="/services"
               className="inline-flex items-center gap-1 text-sm font-medium text-[#0077b6] border border-[#0077b6] px-4 py-2 rounded-md hover:bg-[#0077b6] hover:text-white transition-colors"
@@ -206,7 +206,7 @@ export default function Home() {
 
             {/* Left: text */}
             <div className="flex flex-col justify-center">
-              <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6">
+              <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-6">
                 Safe &amp; Clean Water For Healthier Communities
               </h2>
               <p className="text-gray-600 text-base leading-7 mb-4">
@@ -288,7 +288,7 @@ export default function Home() {
       <section className="py-16 bg-white sm:py-20">
         <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
           <div className="flex items-center justify-between mb-10">
-            <h2 className="text-3xl font-bold text-black tracking-tight">Our Products</h2>
+            <h2 className="text-xl sm:text-3xl font-bold text-black tracking-tight">Our Products</h2>
             <Link
               href="/products"
               className="inline-flex items-center gap-1 text-sm font-medium text-[#0077b6] border border-[#0077b6] px-4 py-2 rounded-md hover:bg-[#0077b6] hover:text-white transition-colors"
@@ -371,7 +371,7 @@ export default function Home() {
       <section className="py-16 bg-gray-50 sm:py-20">
         <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight">Why choose Aqua Solutions?</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight">Why choose Aqua Solutions?</h2>
             <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7">
               We combine local expertise with world-class technology to deliver water solutions that are safe, reliable, and built to last.
             </p>

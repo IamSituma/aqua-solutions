@@ -13,10 +13,10 @@ export default function CookiePolicy() {
       <Navigation />
 
       {/* Hero */}
-      <section className="w-full bg-gray-50 border-b border-gray-100 py-16">
+      <section className="w-full bg-gray-50 border-b border-gray-100 py-8 sm:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold uppercase tracking-widest text-[#0077b6] mb-3 font-[Inter,sans-serif]">Legal</p>
-          <h1 className="text-4xl font-bold text-gray-900 tracking-tight font-[Inter,sans-serif]">Cookie Policy</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight font-[Inter,sans-serif]">Cookie Policy</h1>
           <p className="mt-3 text-sm text-gray-500 font-[Inter,sans-serif]">Last updated: March 25, 2026</p>
         </div>
       </section>

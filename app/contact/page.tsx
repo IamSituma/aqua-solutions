@@ -39,21 +39,20 @@ export default function Contact() {
 
       {/* Hero Section with full-width background image */}
         <section
-          className="relative w-full bg-white min-h-[550px] sm:min-h-[450px] flex items-center justify-center"
-          style={{ minHeight: '550px' }}
+          className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center"
         >
         <img
-          src="/contact-hero.jpg"
+          src="/drinking.jpg"
           alt="Contact Us Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           style={{ zIndex: 0 }}
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-            <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-5xl sm:text-6xl tracking-tight leading-tight">
+        <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-10 sm:py-28 px-4 sm:px-6 lg:px-8">
+            <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
               Contact Us
             </p>
-          <p className="text-lg text-white/90 max-w-2xl drop-shadow text-left">
+          <p className="text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
             Reach out to our team for questions, support, or a free quote. We're here to help you with all your water needs.
           </p>
         </div>
@@ -66,7 +65,7 @@ export default function Contact() {
           <section className="py-16 bg-white sm:py-20">
             <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-black tracking-tight font-[Inter,sans-serif]">We&apos;re Here to Help</h2>
+                <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight font-[Inter,sans-serif]">We&apos;re Here to Help</h2>
                 <p className="mt-4 text-gray-500 text-base max-w-2xl mx-auto leading-7 font-[Inter,sans-serif]">
                   Whether it&apos;s a question about our services, a request for technical assistance, or suggestions for improvement, our team is eager to hear from you.
                 </p>
