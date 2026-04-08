@@ -70,19 +70,46 @@ export default function Contact() {
                   Whether it&apos;s a question about our services, a request for technical assistance, or suggestions for improvement, our team is eager to hear from you.
                 </p>
               </div>
-              <div className="flex flex-col lg:flex-row gap-12 items-start">
-                {/* Map */}
-                <div className="rounded-xl overflow-hidden shadow-sm border border-gray-200 h-full min-h-100 w-full lg:w-1/2">
-                  <iframe
-                    src="https://maps.google.com/maps?q=Kawempe+Police+Station,+Mbogo+Road,+Kampala,+Uganda&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ minHeight: '475px', border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Aqua Solutions location"
-                  />
+              <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+                {/* Contact Info */}
+                <div className="w-full lg:w-1/2 flex flex-col gap-8 bg-gray-50 rounded-xl p-8 border border-gray-100">
+                  <div className="flex gap-4 items-start">
+                    <MapPin className="text-[#0077b6] mt-1 shrink-0" size={22} />
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide font-[Inter,sans-serif] mb-1">Address</h3>
+                      <p className="text-sm text-gray-600 font-[Inter,sans-serif] leading-relaxed">
+                        Aqua Solutions International Ltd.<br />
+                        Mbogo Road<br />
+                        Opposite Kawempe Police Station<br />
+                        P.O. Box 103773<br />
+                        Kampala – Uganda – East Africa
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Mail className="text-[#0077b6] mt-1 shrink-0" size={22} />
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide font-[Inter,sans-serif] mb-1">E-Mail</h3>
+                      <a
+                        href="mailto:info@aqua-uganda.com"
+                        className="text-sm text-[#0077b6] hover:underline font-[Inter,sans-serif]"
+                      >
+                        info@aqua-uganda.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <Phone className="text-[#0077b6] mt-1 shrink-0" size={22} />
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide font-[Inter,sans-serif] mb-1">Telephone</h3>
+                      <ul className="text-sm text-gray-600 font-[Inter,sans-serif] space-y-1">
+                        <li><a href="tel:+256772606898" className="hover:text-[#0077b6]">+256 772 606898</a></li>
+                        <li><a href="tel:+256751121286" className="hover:text-[#0077b6]">+256 751 121286</a></li>
+                        <li><a href="tel:+256782608104" className="hover:text-[#0077b6]">+256 782 608104</a></li>
+                        <li><a href="tel:+4917640449558" className="hover:text-[#0077b6]">+49 176 4044 9558</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 {/* Form */}
                 <form className="flex flex-col gap-5 w-full lg:w-1/2">
@@ -146,6 +173,20 @@ export default function Contact() {
 
           {/* FAQ */}
           <FAQ />
+        </div>
+
+        {/* Full-width Map */}
+        <div className="w-full">
+          <iframe
+            src="https://maps.google.com/maps?q=Kawempe+Police+Station,+Mbogo+Road,+Kampala,+Uganda&output=embed"
+            width="100%"
+            height="600"
+            style={{ border: 0, display: 'block' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Aqua Solutions location"
+          />
         </div>
       </main>
 

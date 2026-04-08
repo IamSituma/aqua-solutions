@@ -17,13 +17,10 @@ function FAQ() {
             <div className="flex gap-4 flex-col">
               <div className="flex gap-2 flex-col">
                 <h4 className="text-3xl md:text-5xl tracking-tighter max-w-xl text-left font-[Inter,sans-serif] font-semibold">
-                  This is the start of something new
+                  Frequently Asked Questions
                 </h4>
                 <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground  text-left">
-                  Managing a small business today is already tough. Avoid further
-                  complications by ditching outdated, tedious trade methods. Our
-                  goal is to streamline SMB trade, making it easier and faster
-                  than ever.
+                  Have questions about our water treatment solutions, delivery, or services? We&apos;ve answered the most common ones below. Can&apos;t find what you&apos;re looking for? Reach out to our team directly.
                 </p>
               </div>
             </div>
@@ -31,36 +28,36 @@ function FAQ() {
           <Accordion type="single" collapsible className="w-full">
             {[
               {
-                q: 'How soon can I get water delivered?',
-                a: 'We offer same-day delivery for urgent orders placed before 2 PM. Regular deliveries are scheduled within 24-48 hours.'
+                q: 'What types of water treatment solutions does Aqua Solutions offer?',
+                a: 'We supply a wide range of water treatment products including water purifiers, filtration systems, reverse osmosis units, UV sterilisers, water softeners, and borehole treatment solutions — for both residential and commercial use.'
               },
               {
-                q: 'What areas do you serve?',
-                a: 'We primarily serve Kampala and surrounding districts. Contact us to check if your location is within our service area.'
+                q: 'Do you serve clients outside of Kampala?',
+                a: 'Yes. While our office is located in Kampala, we serve clients across Uganda and the wider East Africa region. Contact us to discuss delivery and installation options for your location.'
               },
               {
-                q: 'Are your water treatment products safe?',
-                a: 'Yes! All our products are certified and meet international safety standards for water treatment.'
+                q: 'Are your products certified and safe to use?',
+                a: 'All products we supply meet international quality and safety standards for water treatment. We work with trusted manufacturers and certified suppliers to ensure every product is reliable and effective.'
               },
               {
-                q: 'Do you offer installation services?',
-                a: 'Absolutely. Our expert technicians provide professional installation for all water treatment systems.'
+                q: 'Do you offer professional installation?',
+                a: 'Yes. Our trained technicians handle the full installation of water treatment systems, ensuring proper setup, testing, and handover so your system works correctly from day one.'
               },
               {
-                q: 'What payment methods do you accept?',
-                a: 'We accept cash, mobile money, and bank transfers for your convenience.'
+                q: 'Can I get a customised water treatment solution for my business?',
+                a: 'Absolutely. We assess your specific water quality challenges and recommend a tailored solution — whether for a hotel, factory, school, hospital, or any other commercial or industrial facility.'
               },
               {
-                q: 'How do I request a quote?',
-                a: 'You can request a quote through our website contact form or by calling our customer support team.'
+                q: 'Do you provide after-sales support and maintenance?',
+                a: 'Yes. We offer ongoing maintenance contracts and servicing for all systems we install, including filter replacements, system checks, and technical support.'
               },
               {
-                q: 'Do you provide maintenance services?',
-                a: 'Yes, we offer regular maintenance and servicing for all products we install.'
+                q: 'How do I get a quote?',
+                a: 'You can request a quote by filling in the contact form on this page, sending us an email at info@aqua-uganda.com, or calling any of our telephone numbers. We aim to respond within one business day.'
               },
               {
-                q: 'Is there a warranty on your products?',
-                a: 'All our products come with a 2-year warranty covering manufacturing defects and free repairs.'
+                q: 'Do your products come with a warranty?',
+                a: 'Yes. Products supplied by Aqua Solutions come with manufacturer warranties. We also provide post-installation support to address any issues that may arise.'
               }
             ].map((faq, index) => (
               <AccordionItem key={index} value={"index-" + index}>

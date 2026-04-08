@@ -254,22 +254,22 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop',
+                  image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop',
                   name: 'Dr. Jacintha Nayebare',
                   role: 'Director of Research and Development',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
+                  image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop',
                   name: 'Claire Kowalewski',
                   role: 'Water Scientist',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop',
+                  image: 'https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?q=80&w=800&auto=format&fit=crop',
                   name: 'Janepher Turinawe',
                   role: 'Director and Chief Laboratory Technician',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop',
+                  image: 'https://images.unsplash.com/photo-1584361853901-dd1904bb7987?q=80&w=800&auto=format&fit=crop',
                   name: 'Claire Natukunda',
                   role: 'Director at Aqua Solutions International Limited',
                 },
