@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden w-full text-sm text-slate-500 bg-white pt-20 pb-6 font-[Inter,sans-serif]">
+    <footer className="relative overflow-hidden w-full text-sm text-slate-500 bg-white pt-8 sm:pt-10 pb-3 font-[Inter,sans-serif]">
       {/* Background watermark SVG */}
       <svg
         className="hidden md:block absolute -bottom-30 -left-80 opacity-5 w-full h-full pointer-events-none"
@@ -20,76 +21,102 @@ export function Footer() {
         </defs>
       </svg>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 py-10">
-        {/* Brand */}
-        <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="text-xl font-bold text-gray-900 tracking-tight">
-            Aqua Solutions
-          </Link>
-          <p className="text-sm/7 mt-6">
-            Premium water treatment and supply solutions for homes, schools, hospitals, and businesses across Kampala and Uganda since 2015.
-          </p>
-          <ul className="mt-6 space-y-3 text-sm">
-            <li className="flex items-start gap-2">
-              <MapPin size={16} className="shrink-0 mt-0.5 text-[#0077b6]" />
-              <span>Kampala, Uganda</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Phone size={16} className="shrink-0 mt-0.5 text-[#0077b6]" />
-              <span>+256 772 606898
-</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Mail size={16} className="shrink-0 mt-0.5 text-[#0077b6]" />
-              <span>info@aquasolutions.ug</span>
-            </li>
-          </ul>
-        </div>
-
-        {/* Quick Links */}
-        <div className="flex flex-col lg:items-center lg:justify-center">
-          <div className="flex flex-col text-sm space-y-2.5">
-            <h2 className="font-semibold mb-5 text-gray-800">Company</h2>
-            <Link className="hover:text-slate-600 transition" href="/">Home</Link>
-            <Link className="hover:text-slate-600 transition" href="/about">About Us</Link>
-            <Link className="hover:text-slate-600 transition" href="/services">Services</Link>
-            <Link className="hover:text-slate-600 transition" href="/products">Products</Link>
-            <Link className="hover:text-slate-600 transition" href="/contact">Contact Us</Link>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div>
-          <h2 className="font-semibold text-gray-800 mb-5">Subscribe to our newsletter</h2>
-          <div className="text-sm space-y-6 max-w-sm">
-            <p>Stay updated with our latest water solutions, news, and offers, delivered to your inbox weekly.</p>
-            <div className="flex items-center">
-              <input
-                className="rounded-l-md bg-gray-100 outline-none w-full max-w-64 h-11 px-3"
-                type="email"
-                placeholder="Enter your email"
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 lg:gap-14 py-6 sm:py-10">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/aqua.png"
+                alt="Aqua Solutions International Logo"
+                width={100}
+                height={20}
+                className="h-auto w-30"
+                priority
               />
-              <button className="bg-[#0077b6] hover:bg-[#005f8a] transition px-4 h-11 text-white rounded-r-md cursor-pointer">
-                Subscribe
-              </button>
+            </Link>
+            <p className="text-xs sm:text-sm/7 mt-2">
+              Premium water treatment and supply solutions for homes, schools, hospitals, and businesses across Kampala and Uganda since 2015.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <div className="flex flex-col text-xs sm:text-sm space-y-1.5 sm:space-y-2.5">
+              <h2 className="font-semibold mb-3 sm:mb-5 text-gray-800">Company</h2>
+              <Link className="hover:text-slate-600 transition" href="/">Home</Link>
+              <Link className="hover:text-slate-600 transition" href="/about">About Us</Link>
+              <Link className="hover:text-slate-600 transition" href="/services">Services</Link>
+              <Link className="hover:text-slate-600 transition" href="/products">Products</Link>
+            </div>
+          </div>
+
+          {/* Contact Information & Social Media */}
+          <div>
+            <h2 className="font-semibold text-gray-800 mb-3 sm:mb-5 text-xs sm:text-base">Contact Information</h2>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm mb-4 sm:mb-6">
+              <li className="flex items-start gap-2">
+                <MapPin size={14} className="shrink-0 mt-0.5 text-[#0077b6]" />
+                <span>Kampala, Uganda</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Phone size={14} className="shrink-0 mt-0.5 text-[#0077b6]" />
+                <span>+256 772 606898</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Mail size={14} className="shrink-0 mt-0.5 text-[#0077b6]" />
+                <span>info@aquasolutionsinternational.com</span>
+              </li>
+            </ul>
+
+            {/* Social Media */}
+            <div className="pt-3 sm:pt-4 border-t border-slate-200">
+              <div className="flex gap-2 sm:gap-3">
+                <a
+                  href="https://facebook.com/aquasolutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href="https://twitter.com/aquasolutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
+                  aria-label="X (Twitter)"
+                >
+                  <Twitter size={18} />
+                </a>
+                <a
+                  href="https://instagram.com/aquasolutions"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-4 border-t mt-6 border-slate-200">
-        <p className="text-center">
-          Copyright 2025 &copy; Aqua Solutions International. All Rights Reserved.
-        </p>
-        <div className="flex items-center gap-4">
-          <Link href="#">Privacy Policy</Link>
-          <Link href="#">Terms of Service</Link>
-          <Link href="#">Cookie Policy</Link>
+      {/* Footer Bottom */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 py-2 sm:py-4 border-t mt-4 sm:mt-6 border-slate-200">
+          <p className="text-center text-xs sm:text-sm">
+            Copyright 2025 &copy; Aqua Solutions International. All Rights Reserved.
+          </p>
+          <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
+            <Link href="#">Privacy Policy</Link>
+            <Link href="#">Terms of Service</Link>
+            <Link href="#">Cookie Policy</Link>
+          </div>
         </div>
-      </div>
       </div>
     </footer>
   );

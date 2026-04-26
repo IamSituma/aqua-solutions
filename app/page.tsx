@@ -178,7 +178,7 @@ export default function Home() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-contain"
                 />
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-black mb-2">{service.title}</h3>
@@ -256,7 +256,7 @@ export default function Home() {
                 <img
                   src={carouselImages[activeIndex].src}
                   alt={carouselImages[activeIndex].alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
@@ -273,7 +273,7 @@ export default function Home() {
                     <img
                       src={img.src}
                       alt={img.alt}
-                      className="w-full h-14 object-cover"
+                      className="w-full h-14 object-contain"
                     />
                   </button>
                 ))}
@@ -305,21 +305,21 @@ export default function Home() {
                 title: 'Domestic Water Filter',
                 description: 'Compact under-sink or countertop filter for home use. Removes chlorine, sediment, and heavy metals for clean, great-tasting drinking water.',
                 price: 'UGX 350,000',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=Domestic+Filter',
+                img: '/filter.png',
                 message: 'Hello! I am interested in the Domestic Water Filter. Please send me more details.',
               },
               {
                 title: 'Reverse Osmosis System',
                 description: 'Advanced 5-stage RO system for homes and offices. Delivers up to 99% purification, removing bacteria, dissolved solids, and contaminants.',
                 price: 'UGX 1,200,000',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=RO+System',
+                img: '/osmosis.png',
                 message: 'Hello! I am interested in the Reverse Osmosis System. Please send me more details.',
               },
               {
                 title: 'UV Water Steriliser',
                 description: 'Ultraviolet sterilisation unit that eliminates 99.9% of bacteria, viruses, and pathogens without chemicals. Ideal for boreholes and tanks.',
                 price: 'UGX 780,000',
-                img: 'https://placehold.co/600x400/e0f2fe/0077b6?text=UV+Steriliser',
+                img: '/uv.png',
                 message: 'Hello! I am interested in the UV Water Steriliser. Please send me more details.',
               },
             ].map((product) => {
@@ -330,7 +330,7 @@ export default function Home() {
                   <img
                     src={product.img}
                     alt={product.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-48 object-contain"
                   />
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-black mb-1">{product.title}</h3>

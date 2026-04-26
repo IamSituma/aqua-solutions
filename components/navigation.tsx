@@ -12,11 +12,16 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const AquaLogo = () => (
-  <div className="w-9 h-9 bg-[#0077b6] rounded-lg flex items-center justify-center text-white font-bold text-lg">
-    A
-  </div>
+  <Image
+    src="/logoheader.png"
+    alt="Aqua Solutions Logo"
+    width={60}
+    height={50}
+    priority
+  />
 );
 
 export function Navigation() {
@@ -28,6 +33,7 @@ export function Navigation() {
     { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/products', label: 'Products' },
+    { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact Us' },
   ];
 
@@ -57,10 +63,7 @@ export function Navigation() {
       <NavbarBrand>
         <Link href="/" className="flex items-center gap-2">
           <AquaLogo />
-          <div className="hidden sm:block">
-            <p className="font-bold text-gray-900 text-base leading-tight">Aqua Solutions</p>
-            <p className="text-gray-500 text-xs">Kampala, Uganda</p>
-          </div>
+          
         </Link>
       </NavbarBrand>
 
