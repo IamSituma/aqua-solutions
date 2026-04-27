@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Youtube, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -72,32 +72,40 @@ export function Footer() {
             {/* Social Media */}
             <div className="pt-3 sm:pt-4 border-t border-slate-200">
               <div className="flex gap-2 sm:gap-3">
+
+                {/* X Official Icon */}
                 <a
-                  href="https://facebook.com/aquasolutions"
+                  href="https://x.com/aquasolutionsug"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
-                  aria-label="Facebook"
+                  aria-label="X"
                 >
-                  <Facebook size={18} />
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.654l-5.207-6.807-5.967 6.807H2.428l7.723-8.835L1.235 2.25h6.821l4.713 6.231 5.486-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
                 </a>
+
+                {/* YouTube */}
                 <a
-                  href="https://twitter.com/aquasolutions"
+                  href="https://youtube.com/@aquasolutionsinternational"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
-                  aria-label="X (Twitter)"
+                  aria-label="YouTube"
                 >
-                  <Twitter size={18} />
+                  <Youtube size={18} />
                 </a>
+
+                {/* LinkedIn */}
                 <a
-                  href="https://instagram.com/aquasolutions"
+                  href="https://www.linkedin.com/company/aqua-solutions-international/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 sm:p-2.5 rounded-full bg-slate-100 text-[#0077b6] hover:bg-[#0077b6] hover:text-white transition-colors duration-200"
-                  aria-label="Instagram"
+                  aria-label="LinkedIn"
                 >
-                  <Instagram size={18} />
+                  <Linkedin size={18} />
                 </a>
               </div>
             </div>

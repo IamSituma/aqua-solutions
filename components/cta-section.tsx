@@ -39,12 +39,12 @@ export function CtaSection() {
           </div>
           <div className="relative mt-16 lg:mt-8 flex justify-center lg:block lg:w-auto">
             <img
-              alt="Aqua Solutions water treatment"
-              src="https://placehold.co/1824x1080/0077b6/ffffff?text=Aqua+Solutions"
-              width={1824}
-              height={1080}
-              className="w-auto max-w-full rounded-md bg-white/5 ring-1 ring-white/10 lg:absolute lg:top-0 lg:left-0 lg:w-228 lg:max-w-none"
-            />
+  alt="Aqua Solutions water treatment"
+  src="/aqua-tap.png"
+  width={600}
+  height={600}
+  className="w-full h-[550px] max-w-lg rounded-md bg-white/5  lg:w-140 lg:max-w-2xl object-cover"
+/>
           </div>
         </div>
       </div>

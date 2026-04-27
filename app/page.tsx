@@ -25,7 +25,7 @@ export default function Home() {
       description: 'All our systems and installations meet national and international water safety standards, giving you peace of mind.',
       header: (
         <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
-          <img src="https://placehold.co/600x300/e0f2fe/0077b6?text=Certified+%26+Trusted" alt="Certified & Trusted" className="w-full h-full object-cover" />
+          <img src="/certified.png" alt="Certified & Trusted" className="w-full h-full object-contain" />
         </div>
       ),
       icon: (
@@ -39,7 +39,7 @@ export default function Home() {
       description: 'Our experienced teams deliver and install systems quickly with minimal disruption to your home or business.',
       header: (
         <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
-          <img src="https://placehold.co/600x300/cffafe/0e7490?text=Fast+Installation" alt="Fast Installation" className="w-full h-full object-cover" />
+          <img src="/installation.png" alt="Fast Installation" className="w-full h-full object-contain" />
         </div>
       ),
       icon: (
@@ -53,7 +53,7 @@ export default function Home() {
       description: 'Our support team is available round the clock to handle maintenance requests, emergencies, and general enquiries.',
       header: (
         <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
-          <img src="https://placehold.co/600x300/dbeafe/1d4ed8?text=24%2F7+Support" alt="24/7 Customer Support" className="w-full h-full object-cover" />
+          <img src="/customer.png" alt="24/7 Customer Support" className="w-full h-full object-contain" />
         </div>
       ),
       icon: (
@@ -67,7 +67,7 @@ export default function Home() {
       description: 'We use sustainable practices and materials to safeguard Uganda\'s natural resources and protect the environment for future generations.',
       header: (
         <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
-          <img src="https://placehold.co/600x300/d1fae5/059669?text=Eco-Friendly+Methods" alt="Eco-Friendly Methods" className="w-full h-full object-cover" />
+          <img src="/ecofriendly.png" alt="Eco-Friendly Methods" className="w-full h-full object-contain" />
         </div>
       ),
       icon: (
@@ -81,7 +81,7 @@ export default function Home() {
       description: 'Quality water solutions at competitive prices, with flexible payment options to suit every budget.',
       header: (
         <div className="flex flex-1 w-full h-full min-h-24 rounded-xl overflow-hidden">
-          <img src="https://placehold.co/600x300/e0f2fe/0077b6?text=Affordable+Pricing" alt="Affordable Pricing" className="w-full h-full object-cover" />
+          <img src="/price.png" alt="Affordable Pricing" className="w-full h-full object-contain" />
         </div>
       ),
       icon: (
@@ -178,7 +178,7 @@ export default function Home() {
                 <img
                   src={service.img}
                   alt={service.title}
-                  className="w-full h-48 object-contain"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-black mb-2">{service.title}</h3>
