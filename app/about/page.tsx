@@ -14,12 +14,12 @@ import { aboutGridCards } from '@/components/about-grid-data';
 
 export default function About() {
   const carouselImages = [
-    { src: 'https://picsum.photos/seed/carousel1/800/600', alt: 'Borehole water' },
-    { src: 'https://picsum.photos/seed/carousel2/800/600', alt: 'Community water' },
-    { src: 'https://picsum.photos/seed/carousel3/800/600', alt: 'Clean drinking water' },
-    { src: 'https://picsum.photos/seed/carousel4/800/600', alt: 'Water filtration' },
-    { src: 'https://picsum.photos/seed/carousel5/800/600', alt: 'Purification plant' },
-    { src: 'https://picsum.photos/seed/carousel6/800/600', alt: 'Safe water supply' },
+    { src: '/aqua-expo.jpeg', alt: 'Borehole water' },
+    { src: '/aqua-field.jpeg', alt: 'Community water' },
+    { src: '/aqua-staff.jpeg', alt: 'Clean drinking water' },
+    { src: '/aqua-expo2.jpeg', alt: 'Water filtration' },
+    { src: '/aqua-field2.jpeg', alt: 'Purification plant' },
+    { src: '/aqua-field3.jpeg', alt: 'Safe water supply' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -127,11 +127,11 @@ export default function About() {
             {/* Right: main image + thumbnail carousel */}
             <div className="flex flex-col h-full">
               {/* Main image */}
-              <div className="rounded-lg overflow-hidden mb-3 flex-1" style={{minHeight: '300px'}}>
+              <div className="rounded-lg overflow-hidden mb-3 flex-1" style={{minHeight: '500px'}}>
                 <img
                   src={carouselImages[activeIndex].src}
                   alt={carouselImages[activeIndex].alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-[500px] object-cover"
                 />
               </div>
 
@@ -164,7 +164,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-3">
-              Our Gallery
+              Our Projects
             </h2>
             <p className="text-gray-500 text-base max-w-2xl mx-auto">
               A glimpse into our projects, installations, and the communities we serve across Uganda.

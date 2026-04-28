@@ -17,7 +17,7 @@ const categories: { id: Category; label: string }[] = [
 
 const products = [
   {
-    name: 'Microbiological Field Test Kit',
+    name: 'LETZTEST Test Tube',
     category: 'MT' as Category,
     price: 'UGX 280,000',
     description: 'Rapid on-site detection of coliform bacteria and E.coli in water sources with easy-to-read results.',
@@ -25,7 +25,7 @@ const products = [
     image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'Portable Bacteria Detector',
+    name: 'MT LETZTEST Household Water Test Kit',
     category: 'MT' as Category,
     price: 'UGX 520,000',
     description: 'Handheld device for real-time microbial contamination screening in field conditions.',
@@ -33,7 +33,7 @@ const products = [
     image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'E.coli Rapid Test Strips',
+    name: 'LETZTEST Portable Membrane Filtration Kit',
     category: 'MT' as Category,
     price: 'UGX 95,000',
     description: 'Single-use test strips for fast qualitative detection of E.coli contamination in drinking water.',
@@ -41,7 +41,39 @@ const products = [
     image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'pH & TDS Meter',
+    name: 'LETZTEST Portable Electricity-Free Incubator -37°C',
+    category: 'MT' as Category,
+    price: 'UGX 95,000',
+    description: 'Single-use test strips for fast qualitative detection of E.coli contamination in drinking water.',
+    features: ['Results in 15 minutes', 'Pack of 100 strips', 'High sensitivity', 'Suitable for field use'],
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Water Sampler',
+    category: 'MT' as Category,
+    price: 'UGX 95,000',
+    description: 'Single-use test strips for fast qualitative detection of E.coli contamination in drinking water.',
+    features: ['Results in 15 minutes', 'Pack of 100 strips', 'High sensitivity', 'Suitable for field use'],
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Laboratory Membrane Filtration Kit',
+    category: 'MT' as Category,
+    price: 'UGX 95,000',
+    description: 'Single-use test strips for fast qualitative detection of E.coli contamination in drinking water.',
+    features: ['Results in 15 minutes', 'Pack of 100 strips', 'High sensitivity', 'Suitable for field use'],
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Big Electricity-Free Incubator – 37°C',
+    category: 'MT' as Category,
+    price: 'UGX 95,000',
+    description: 'Single-use test strips for fast qualitative detection of E.coli contamination in drinking water.',
+    features: ['Results in 15 minutes', 'Pack of 100 strips', 'High sensitivity', 'Suitable for field use'],
+    image: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'PC Turbidity Tube',
     category: 'PT' as Category,
     price: 'UGX 145,000',
     description: 'Dual-function digital meter for measuring pH and total dissolved solids in water samples.',
@@ -49,7 +81,7 @@ const products = [
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'Multi-Parameter Water Analyzer',
+    name: 'PC Visual Color Comparator – pH and chlorine',
     category: 'PT' as Category,
     price: 'UGX 890,000',
     description: 'Benchtop analyzer for comprehensive physico-chemical water quality profiling in one device.',
@@ -57,7 +89,7 @@ const products = [
     image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'Chemical Testing Kit',
+    name: 'LETZTESTER – Ultimate Visual Color Comparator Kit',
     category: 'PT' as Category,
     price: 'UGX 175,000',
     description: 'Complete reagent-based kit for testing chlorine, nitrates, iron, fluoride and more.',
@@ -65,7 +97,31 @@ const products = [
     image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'Custom-Lab Box Basic',
+    name: 'LETZTEST Multimeter',
+    category: 'PT' as Category,
+    price: 'UGX 175,000',
+    description: 'Complete reagent-based kit for testing chlorine, nitrates, iron, fluoride and more.',
+    features: ['10 chemical parameters', 'Color comparison method', 'Includes test tubes & vials', '100+ tests per kit'],
+    image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Photometer',
+    category: 'PT' as Category,
+    price: 'UGX 175,000',
+    description: 'Complete reagent-based kit for testing chlorine, nitrates, iron, fluoride and more.',
+    features: ['10 chemical parameters', 'Color comparison method', 'Includes test tubes & vials', '100+ tests per kit'],
+    image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Visual Arsenic Test Kit',
+    category: 'PT' as Category,
+    price: 'UGX 175,000',
+    description: 'Complete reagent-based kit for testing chlorine, nitrates, iron, fluoride and more.',
+    features: ['10 chemical parameters', 'Color comparison method', 'Includes test tubes & vials', '100+ tests per kit'],
+    image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=600&auto=format&fit=crop',
+  },
+  {
+    name: 'LETZTEST Water Monitoring Box BASIC',
     category: 'CL' as Category,
     price: 'UGX 650,000',
     description: 'Pre-configured portable lab box for basic field water quality testing in remote areas.',
@@ -73,20 +129,12 @@ const products = [
     image: 'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=600&auto=format&fit=crop',
   },
   {
-    name: 'Custom-Lab Box Advanced',
+    name: 'LETZTEST Water Monitoring Box ADVANCED',
     category: 'CL' as Category,
     price: 'UGX 1,450,000',
     description: 'Advanced field lab covering both microbiological and physico-chemical testing in one compact box.',
     features: ['Microbio + physicochemical', 'Solar charging option', '20+ parameters', 'Training guide included'],
     image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=600&auto=format&fit=crop',
-  },
-  {
-    name: 'Custom-Lab Box Enterprise',
-    category: 'CL' as Category,
-    price: 'Contact for pricing',
-    description: 'Fully customised laboratory box built to your exact specifications for large-scale programs.',
-    features: ['Fully configurable', 'Branded packaging available', 'Bulk pricing', 'Dedicated support'],
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600&auto=format&fit=crop',
   },
 ];
 

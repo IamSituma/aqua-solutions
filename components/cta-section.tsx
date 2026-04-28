@@ -28,7 +28,7 @@ export function CtaSection() {
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <Link
                 href="/contact"
-                className="rounded-md bg-[#0077b6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#005f8a] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-[Inter,sans-serif]"
+                className="rounded-md bg-[#0077b6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#ffffff] hover:text-[#0077b6] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-[Inter,sans-serif]"
               >
                 Get a Free Quote
               </Link>
@@ -37,14 +37,14 @@ export function CtaSection() {
               </Link>
             </div>
           </div>
-          <div className="relative mt-16 lg:mt-8 flex justify-center lg:block lg:w-auto">
+          <div className="relative mt-16 lg:mt-12 flex justify-center lg:block lg:w-auto">
             <img
-  alt="Aqua Solutions water treatment"
-  src="/aqua-tap.png"
-  width={600}
-  height={600}
-  className="w-full h-[550px] max-w-lg rounded-md bg-white/5  lg:w-140 lg:max-w-2xl object-cover"
-/>
+              alt="Aqua Solutions water treatment"
+              src="/aqua-tap.png"
+              width={600}
+              height={600}
+              className="w-full h-[550px] max-w-lg rounded-md bg-white/5 lg:w-150 lg:max-w-2xl object-cover"
+            />
           </div>
         </div>
       </div>

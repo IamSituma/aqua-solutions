@@ -18,7 +18,7 @@ const AquaLogo = () => (
   <Image
     src="/logoheader.png"
     alt="Aqua Solutions Logo"
-    width={60}
+    width={50}
     height={50}
     priority
   />
@@ -76,7 +76,7 @@ export function Navigation() {
               className={`text-sm px-3 py-1.5 rounded-md transition-colors ${
                 isActive(link.href)
                   ? 'text-[#0077b6] font-medium'
-                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 font-normal'
+                  : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 font-semibold'
               }`}
             >
               {link.label}

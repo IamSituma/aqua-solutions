@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const services = [
   {
@@ -16,12 +14,8 @@ const services = [
       'ISO 9001:2015 certified products',
       'Safe delivery to your location',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/testink-kits.jpg',
   },
   {
     title: 'Water Quality Management',
@@ -33,12 +27,8 @@ const services = [
       'Microbiological testing',
       'Off-grid lab setup & operationalisation',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1564069114553-7215e1ff1890?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/water-quality.webp',
   },
   {
     title: 'Quality Water Tests',
@@ -50,12 +40,8 @@ const services = [
       'In-situ field testing',
       'Quantitative lab measurements',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/water-testing-kit.jpeg',
   },
   {
     title: 'Water Treatment',
@@ -67,12 +53,8 @@ const services = [
       'Contaminant removal',
       'Ongoing quality monitoring',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/drinking-water-in-a-glass.webp',
   },
   {
     title: 'Borehole Drilling & Installation',
@@ -84,12 +66,8 @@ const services = [
       'Casing & completion',
       'Pump installation',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1581093577421-f561a654a353?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/borehole-drilling.jpg',
   },
   {
     title: 'Water Tank Cleaning',
@@ -101,12 +79,8 @@ const services = [
       'Disinfection treatment',
       'Tank maintenance & repair',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1584622781867-1a2f91cf1c34?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1503435824048-a799a3a84bf7?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1584991870880-5a40a5a4e6b0?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/water-tank.jpeg',
   },
   {
     title: 'Community Education & Training',
@@ -118,12 +92,8 @@ const services = [
       'Sanitation & conservation practices',
       'Point-of-use filtration systems',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/water-qualty.jpg',
   },
   {
     title: 'Environmental Protection',
@@ -135,31 +105,18 @@ const services = [
       'Letztest tube recycling programme',
       'Sustainable operational practices',
     ],
-    images: [
-      'https://images.unsplash.com/photo-1542601906897-62563aa791b5?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=900&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=900&auto=format&fit=crop',
-    ],
+    image:
+      '/environment.jpg',
   },
 ];
 
 export default function Services() {
-  const [slides, setSlides] = useState<number[]>(services.map(() => 0));
-
-  const prev = (idx: number) =>
-    setSlides((s) => s.map((v, i) => (i === idx ? (v - 1 + 4) % 4 : v)));
-  const next = (idx: number) =>
-    setSlides((s) => s.map((v, i) => (i === idx ? (v + 1) % 4 : v)));
-
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section
-        className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center"
-      >
+      <section className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center">
         <img
           src="/water treatment.jpg"
           alt="Our Services Hero"
@@ -189,50 +146,13 @@ export default function Services() {
                   idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
-                {/* Carousel */}
+                {/* Image */}
                 <div className="w-full md:w-1/2 shrink-0">
-                  <div className="relative overflow-hidden rounded-xl aspect-4/3 bg-gray-100 shadow-md">
-                    {service.images.map((src, imgIdx) => (
-                      <img
-                        key={imgIdx}
-                        src={src}
-                        alt={`${service.title} ${imgIdx + 1}`}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                          slides[idx] === imgIdx ? 'opacity-100' : 'opacity-0'
-                        }`}
-                      />
-                    ))}
-                    {/* Arrows */}
-                    <button
-                      onClick={() => prev(idx)}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
-                      aria-label="Previous image"
-                    >
-                      <ChevronLeft size={18} />
-                    </button>
-                    <button
-                      onClick={() => next(idx)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
-                      aria-label="Next image"
-                    >
-                      <ChevronRight size={18} />
-                    </button>
-                    {/* Dots */}
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                      {service.images.map((_, dotIdx) => (
-                        <button
-                          key={dotIdx}
-                          onClick={() =>
-                            setSlides((s) => s.map((v, i) => (i === idx ? dotIdx : v)))
-                          }
-                          className={`w-2 h-2 rounded-full transition-colors ${
-                            slides[idx] === dotIdx ? 'bg-white' : 'bg-white/40'
-                          }`}
-                          aria-label={`Go to image ${dotIdx + 1}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-[500px] rounded-xl shadow-md object-cover"
+                  />
                 </div>
 
                 {/* Text */}
@@ -276,4 +196,3 @@ export default function Services() {
     </div>
   );
 }
-
