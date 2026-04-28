@@ -62,7 +62,7 @@ function FAQ() {
             ].map((faq, index) => (
               <AccordionItem key={index} value={"index-" + index}>
                 <AccordionTrigger>
-                  <span className="text-base md:text-lg font-[Inter,sans-serif] font-semibold text-muted-foreground">{faq.q}</span>
+                  <span className="text-base md:text-m font-[Inter,sans-serif] font-normal text-muted-foreground">{faq.q}</span>
                 </AccordionTrigger>
                 <AccordionContent>
                   <span className="text-base md:text-base font-[Inter,sans-serif] text-black">{faq.a}</span>

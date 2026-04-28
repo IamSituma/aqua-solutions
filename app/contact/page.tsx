@@ -94,7 +94,7 @@ export default function Contact() {
                         href="mailto:info@aqua-uganda.com"
                         className="text-sm text-[#0077b6] hover:underline font-[Inter,sans-serif]"
                       >
-                        info@aqua-uganda.com
+                        info@aquasolutionsinternational.com
                       </a>
                     </div>
                   </div>

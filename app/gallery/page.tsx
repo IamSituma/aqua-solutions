@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CtaSection } from '@/components/cta-section';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 type GalleryCategory = 'All' | 'Installations' | 'Products' | 'Company';
 
@@ -20,15 +21,39 @@ const galleryItems = [
     title: 'Community Water Project',
     category: 'Installations' as GalleryCategory,
     image: '/aqua.jpeg',
+    images: [
+      '/aqua.jpeg',
+      '/aqua-expo2.jpeg',
+      '/aqua-staff2.jpeg',
+      '/auqa3.jpeg',
+    ],
   },
 ];
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('All');
+  const [selectedItem, setSelectedItem] = useState<typeof galleryItems[0] | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const filtered = activeCategory === 'All'
     ? galleryItems
     : galleryItems.filter((item) => item.category === activeCategory);
+
+  const handlePrev = () => {
+    if (selectedItem) {
+      setCurrentSlide((prev) => (prev - 1 + selectedItem.images.length) % selectedItem.images.length);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedItem) {
+      setCurrentSlide((prev) => (prev + 1) % selectedItem.images.length);
+    }
+  };
+
+  const handleDotClick = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -75,9 +100,13 @@ export default function Gallery() {
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filtered.map((item) => (
-              <div
+              <button
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-64 sm:h-72"
+                onClick={() => {
+                  setSelectedItem(item);
+                  setCurrentSlide(0);
+                }}
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-64 sm:h-72 text-left"
               >
                 {/* Image */}
                 <img
@@ -99,7 +128,7 @@ export default function Gallery() {
                     {item.title}
                   </h3>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
 
@@ -111,6 +140,79 @@ export default function Gallery() {
           )}
         </div>
       </section>
+
+      {/* Modal Carousel */}
+      {selectedItem && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+          <div className="relative w-full max-w-4xl">
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+              aria-label="Close"
+            >
+              <X size={28} />
+            </button>
+
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden rounded-lg bg-black h-96 sm:h-[500px] md:h-[600px]">
+              {/* Images */}
+              {selectedItem.images.map((image, idx) => (
+                <img
+                  key={idx}
+                  src={image}
+                  alt={`${selectedItem.title} ${idx + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                    idx === currentSlide ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+
+              {/* Left Arrow */}
+              <button
+                onClick={handlePrev}
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={handleNext}
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white rounded-full p-2 transition-colors"
+                aria-label="Next image"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              {/* Dots */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {selectedItem.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleDotClick(idx)}
+                    className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                      idx === currentSlide ? 'bg-white' : 'bg-white/40'
+                    }`}
+                    aria-label={`Go to image ${idx + 1}`}
+                  />
+                ))}
+              </div>
+
+              {/* Image Counter */}
+              <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-md text-sm">
+                {currentSlide + 1} / {selectedItem.images.length}
+              </div>
+            </div>
+
+            {/* Title */}
+            <div className="mt-4 text-center">
+              <h2 className="text-white text-xl sm:text-2xl font-semibold">{selectedItem.title}</h2>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CTA Section */}
       <CtaSection />
