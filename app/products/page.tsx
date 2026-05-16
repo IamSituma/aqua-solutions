@@ -161,9 +161,9 @@ export default function Products() {
         <div className="absolute inset-0 bg-black/40 z-10" />
         <div className="relative z-20 w-full max-w-7xl mx-auto flex flex-col items-start justify-center py-10 sm:py-28 px-4 sm:px-6 lg:px-8">
           <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
-            Our Products
+            Official Distributor of<br />Letztest products in Uganda.
           </p>
-          <p className="text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
+          <p className="mt-4 text-sm sm:text-lg text-white/90 max-w-2xl drop-shadow text-left">
             High-quality water testing and treatment equipment for field, laboratory, and remote applications
           </p>
         </div>

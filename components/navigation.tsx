@@ -48,9 +48,10 @@ export function Navigation() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       position="static"
-      className="bg-white shadow-sm border-b border-gray-200"
+      className="bg-white shadow-sm border-b border-gray-200 font-[Inter,sans-serif]"
       classNames={{
-        wrapper: 'max-w-7xl px-4 sm:px-6 lg:px-8',
+        base: 'min-h-[4 rem]',
+        wrapper: 'max-w-7xl px-6 sm:px-8 lg:px-12',
         item: [
           'flex',
           'relative',
@@ -85,7 +86,7 @@ export function Navigation() {
         ))}
       </NavbarContent>
 
-      {/* CTA + mobile toggle */}
+      {/* Right: CTA (desktop) + hamburger (mobile) */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden sm:flex">
           <Link

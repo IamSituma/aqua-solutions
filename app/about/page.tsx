@@ -5,10 +5,17 @@
 
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
+import TeamMemberCard from '@/components/team-member-card';
+import { CtaSection } from '@/components/cta-section';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import Link from 'next/link';
 import { useState } from 'react';
-import LayoutGrid from '@/components/layout-grid';
-import { aboutGridCards } from '@/components/about-grid-data';
 
 
 
@@ -58,7 +65,7 @@ export default function About() {
               <img
                 src="/clean water.jpg"
                 alt="Aqua Solutions Vision"
-                className="w-full h-100 md:h-128 object-cover rounded-lg shadow-md border border-gray-200"
+                className="w-full h-[40rem] md:h-[35rem] object-cover rounded-lg shadow-md border border-gray-200"
               />
             </div>
             {/* Vision & Mission on the right */}
@@ -159,23 +166,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Image Gallery Grid Section */}
-      <section className="py-20 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-4xl font-bold text-black tracking-tight leading-snug mb-3">
-              Our Projects
-            </h2>
-            <p className="text-gray-500 text-base max-w-2xl mx-auto">
-              A glimpse into our projects, installations, and the communities we serve across Uganda.
-            </p>
-          </div>
-        </div>
-        <div className="h-187.5 w-full">
-          <LayoutGrid cards={aboutGridCards} />
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +191,7 @@ export default function About() {
                   description: 'Round-the-clock emergency response and maintenance to keep your water flowing.',
                 },
                 {
-                  image: '/purification.jpg',
+                  image: 'https://images.pexels.com/photos/30218643/pexels-photo-30218643.jpeg?auto=compress&cs=tinysrgb&w=800',
                   title: 'Eco-Friendly Methods',
                   description: "Sustainable, environmentally responsible practices that protect Uganda's natural resources.",
                 },
@@ -211,7 +201,7 @@ export default function About() {
                   description: 'Transparent, competitive pricing with flexible packages suited for every budget.',
                 },
                 {
-                  image: '/safe water.jpg',
+                  image: 'https://images.pexels.com/photos/3825377/pexels-photo-3825377.jpeg?auto=compress&cs=tinysrgb&w=800',
                   title: 'Water Testing',
                   description: 'Comprehensive on-site and lab water quality testing to ensure safety at every stage.',
                 },
@@ -251,94 +241,55 @@ export default function About() {
             <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
               Our dedicated team of water quality experts, engineers, and customer service professionals are committed to delivering excellence every day.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop',
-                  name: 'Dr. Jacintha Nayebare',
-                  role: 'Director of Research and Development',
-                },
-                {
-                  image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop',
-                  name: 'Claire Kowalewski',
-                  role: 'Water Scientist',
-                },
-                {
-                  image: 'https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?q=80&w=800&auto=format&fit=crop',
-                  name: 'Janepher Turinawe',
-                  role: 'Director and Chief Laboratory Technician',
-                },
-                {
-                  image: 'https://images.unsplash.com/photo-1584361853901-dd1904bb7987?q=80&w=800&auto=format&fit=crop',
-                  name: 'Claire Natukunda',
-                  role: 'Director at Aqua Solutions International Limited',
-                },
-              ].map((member, idx) => (
-                <div key={idx} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 object-cover object-top"
-                  />
-                  <div className="p-5 flex flex-col gap-1">
-                    <h3 className="text-base font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-gray-500">{member.role}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <Carousel opts={{ loop: true, align: 'center' }}>
+              <CarouselContent>
+                {[
+                  {
+                    image: '/dr-jacinta.jpeg',
+                    name: 'Dr. Jacintha Nayebare',
+                    role: 'Director of Research and Development',
+                    description: 'A distinguished hydrogeologist, serves as the Director of Research and Development at Aqua Solutions International Limited. With over fifteen years of experience in the water and environmental management sectors, Jacintha has established herself as an expert hydrogeologist. Her extensive background encompasses a wide range of projects, from groundwater exploration and management to ensuring sustainable water quality solutions. Jacintha’s expertise in hydrogeology has been instrumental in the successful implementation of numerous water projects across Uganda, contributing significantly to the company’s mission of providing clean and safe water solutions to communities in need.',
+                  },
+                  {
+                    image: '/kowalewski.jpeg',
+                    name: 'Claire Kowalewski',
+                    role: 'Water Scientist',
+                    description: 'She is a water scientist by profession. She is a director and co-founder at Aqua Solutions International Limited as well a project manager at Letztest. Her passion is in instructing customers on how to use the companies products. She is incharge of training and capacity development. She obtained her BSc. and MSc. at the University of Duisburg-Essen, Germany, in Water Science. She currently teaches at the Rhine-Waal University of Applied Sciences, Germany, in the faculty of  Communication and Environment.',
+                  },
+                  {
+                    image: '/janepher.jpg',
+                    name: 'Janepher Turinawe',
+                    role: 'Director and Chief Laboratory Technician',
+                    description: 'serves as the Director and Chief Laboratory Technician at Aqua Solutions International Limited. With extensive experience and expertise in laboratory operations, Jenifer oversees all aspects of the company’s laboratory operations while ensuring the highest standards of laboratory practices and protocols are maintained. Her role allows for seamless integration of technical knowledge and executive management, driving innovation and excellence within the organization.',
+                  },
+                  {
+                    image: '/claire.jpeg',
+                    name: 'Claire Natukunda',
+                    role: 'Director at Aqua Solutions International Limited',
+                    description: 'Claire is a Director at Aqua Solutions International Limited. Claire holds a bachelor’s degree in Community Psychology and brings a unique blend of compassion and practicality to the operations of Aqua Solutions International Limited. With a deep-rooted commitment to community welfare and environmental stewardship, Claire provides strategic leadership by guiding the company with a vision that prioritizes ethical business practices and sustainable solutions as well as community engagement through collaborating with NGOs, government agencies, and grassroots organizations to advocate for safe water initiatives.',
+                  },
+                ].map((member, idx) => (
+                  <CarouselItem key={idx}>
+                    <TeamMemberCard
+                      position="left"
+                      name={member.name}
+                      jobPosition={member.role}
+                      imageUrl={member.image}
+                      description={member.description}
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <CarouselPrevious className="static translate-y-0 size-10 rounded-full border-gray-300" />
+                <CarouselNext className="static translate-y-0 size-10 rounded-full border-gray-300" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </main>
 
-      {/* CTA Section */}
-      <div className="bg-gray-900">
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-          <div className="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-            <svg
-              viewBox="0 0 1024 1024"
-              aria-hidden="true"
-              className="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
-            >
-              <circle r={512} cx={512} cy={512} fill="url(#about-cta-gradient)" fillOpacity="0.7" />
-              <defs>
-                <radialGradient id="about-cta-gradient">
-                  <stop stopColor="#0077b6" />
-                  <stop offset={1} stopColor="#00b4d8" />
-                </radialGradient>
-              </defs>
-            </svg>
-            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <h2 className="text-2xl font-semibold tracking-tight text-balance text-white sm:text-4xl font-[Inter,sans-serif]">
-                Ready for clean, safe water in your home or business?
-              </h2>
-              <p className="mt-6 text-lg/8 text-pretty text-gray-300 font-[Inter,sans-serif]">
-                Get in touch with our team today for a free consultation and quote. We serve homes, schools, hospitals, and businesses across Kampala and Uganda.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <Link
-                  href="/contact"
-                  className="rounded-md bg-[#0077b6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#005f8a] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-[Inter,sans-serif]"
-                >
-                  Get a Free Quote
-                </Link>
-                <Link href="/services" className="text-sm font-semibold text-white hover:text-gray-100 font-[Inter,sans-serif]">
-                  Explore Services <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </div>
-            <div className="relative mt-16 h-80 lg:mt-8">
-              <img
-                alt="Aqua Solutions water treatment"
-                src="https://placehold.co/1824x1080/0077b6/ffffff?text=Aqua+Solutions"
-                width={1824}
-                height={1080}
-                className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <CtaSection />
 
       <Footer />
     </div>

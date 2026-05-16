@@ -1,18 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CtaSection } from '@/components/cta-section';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-type GalleryCategory = 'All' | 'Installations' | 'Products' | 'Company';
+type GalleryCategory = 'All' | 'Installations' | 'Products' | 'Field Work';
 
 const categories: { id: GalleryCategory; label: string }[] = [
   { id: 'All', label: 'All' },
   { id: 'Installations', label: 'Installations' },
   { id: 'Products', label: 'Products' },
-  { id: 'Company', label: 'Company' },
+  { id: 'Field Work', label: 'Field Work' },
 ];
 
 const galleryItems = [
@@ -26,6 +26,39 @@ const galleryItems = [
       '/aqua-expo2.jpeg',
       '/aqua-staff2.jpeg',
       '/auqa3.jpeg',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Water Testing Equipment in Action',
+    category: 'Products' as GalleryCategory,
+    image: '/Aqua014.jpeg',
+    images: [
+      '/Aqua012.jpeg',
+      '/Aqua013.jpeg',
+      '/Aqua014.jpeg',
+      '/Aqua015.jpeg',
+      '/Aqua016.jpeg',
+      '/Aqua017.jpeg',
+      '/Aqua018.jpeg',
+      '/Aqua0110.jpeg',
+      '/Aqua0111.jpeg',
+      '/Aqua0112.jpeg',
+      '/Aqua0113.jpeg',     
+    ],
+  },
+  {
+    id: 3,
+    title: 'Staff in the Field',
+    category: 'Field Work' as GalleryCategory,
+    image: '/fieldwork4.jpeg',
+    images: [
+      '/fieldwork1.jpeg',
+      '/fieldwork2.jpeg',
+      '/fieldwork3.jpeg',
+      '/fieldwork4.jpeg',
+      '/fieldwork5.jpeg',
+      '/fieldwork6.jpeg',    
     ],
   },
 ];
@@ -54,6 +87,20 @@ export default function Gallery() {
   const handleDotClick = (index: number) => {
     setCurrentSlide(index);
   };
+
+  const closeModal = useCallback(() => {
+    setSelectedItem(null);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    if (selectedItem) {
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [selectedItem, closeModal]);
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -143,8 +190,14 @@ export default function Gallery() {
 
       {/* Modal Carousel */}
       {selectedItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
-          <div className="relative w-full max-w-4xl">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setSelectedItem(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Close Button */}
             <button
               onClick={() => setSelectedItem(null)}
