@@ -105,7 +105,7 @@ export default function Home() {
               <p className="mt-6 text-white font-[Inter,sans-serif] font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-tight">
                 Clean Water For Every Home
               </p>
-              <p className="mt-6 sm:mt-12 font-[Inter,sans-serif] text-sm sm:text-base font-normal leading-7 text-white/70">
+              <p className="mt-6 sm:mt-12 font-[Inter,sans-serif] text-sm sm:text-base font-normal leading-7 text-white/100">
                 Aqua Solutions International Limited provides comprehensive water treatment and  water testing products across Uganda and East Africa. Reliable, safe, and sustainable water for
                 residential and commercial needs.
               </p>
