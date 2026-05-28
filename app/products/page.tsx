@@ -12,7 +12,7 @@ const categories: { id: Category; label: string }[] = [
   { id: 'All', label: 'All Products' },
   { id: 'MT', label: 'MT – Microbiological Testing' },
   { id: 'PT', label: 'PT – Physico-chemical Testing' },
-  { id: 'CL', label: 'CL – Custom-Lab Boxes' },
+  { id: 'CL', label: 'ML – Mobile Laboratory' },
   { id: 'GP', label: 'GP – General Products' },
 ];
 
