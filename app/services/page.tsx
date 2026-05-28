@@ -5,9 +5,9 @@ import { Footer } from '@/components/footer';
 
 const services = [
   {
-    title: 'Retailing of Water Testing Kits & Equipment',
+    title: 'Supply of Water Testing Kits & Equipment',
     description:
-      'Aqua Uganda is a retailer and distributor of water quality testing equipment and laboratory consumables. We are the sole distributors of Letztest water testing equipment and offer both chemical and microbiological water testing kits from LETZTEST. These kits are manufactured by the ISO 9001:2015 certified company Letzner Pharmawasseraufbereitung GmbH. The equipment is delivered safely right where you need it.',
+      'Aqua Solutions International Limited is a supplier and distributor of water quality testing equipment and laboratory consumables. We are the sole distributors of Letztest water testing equipment and offer both chemical and microbiological water testing kits from LETZTEST. These kits are manufactured by the ISO 9001:2015 certified company Letzner Pharmawasseraufbereitung GmbH. The equipment is delivered safely right where you need it.',
     features: [
       'Sole distributors of Letztest equipment',
       'Chemical & microbiological test kits',
@@ -23,22 +23,21 @@ const services = [
       'We provide comprehensive water quality management services including conducting regular tests to assess water quality from various sources, chemical analysis for contaminants and pollutants, and microbiological testing for harmful microorganisms. We also specialise in setting up and operationalising off-grid water testing laboratories to help remote facilities run efficiently.',
     features: [
       'Water testing services',
-      'Chemical analysis',
-      'Microbiological testing',
-      'Off-grid lab setup & operationalisation',
+      'Tank Cleaning & maintenance',
+      'Quality Water Tests',
     ],
     image:
       '/water-quality.webp',
   },
   {
-    title: 'Quality Water Tests',
+    title: 'Water Sampling & Analysis',
     description:
-      'With our potable water testing kits, we are able to test your water for both physico-chemical and microbiological parameters qualitatively in situ. We also offer quantitative laboratory services for precise measurement of different water quality parameters in our fully equipped labs.',
+      'Our water sampling service involves professionally collecting water samples from your source for laboratory testing and analysis to determine water quality, safety, and possible contamination. We ensure proper sampling procedures are followed to provide accurate results for drinking water, boreholes, wells, tanks, rivers, and other water sources.',
     features: [
-      'Physico-chemical parameter testing',
-      'Microbiological parameter testing',
-      'In-situ field testing',
-      'Quantitative lab measurements',
+      'Professional water sample collection',
+      'Accurate water quality testing',
+      'Safe sampling procedures',
+      'Suitable for all water sources',
     ],
     image:
       '/water-testing-kit.jpeg',
@@ -54,20 +53,20 @@ const services = [
       'Ongoing quality monitoring',
     ],
     image:
-      '/drinking-water-in-a-glass.webp',
+      '/water treatment.jpg',
   },
   {
     title: 'Borehole Drilling & Installation',
     description:
-      'We offer end-to-end borehole solutions: geological site assessments to determine the most suitable drilling locations, professional borehole drilling using appropriate equipment, installation of casings to prevent contamination, and pump installation for reliable groundwater extraction.',
+      'We offer end-to-end borehole solutions: hydrogeological site assessments to determine the most suitable drilling locations, professional borehole drilling using appropriate equipment, installation of casings to prevent contamination, and pump installation for reliable groundwater extraction.',
     features: [
-      'Geological site assessment',
+      'Hydrogeological site assessment',
       'Professional borehole drilling',
-      'Casing & completion',
+      ' Installation of casings',
       'Pump installation',
     ],
     image:
-      '/borehole-drilling.jpg',
+      '/borehole.jpeg',
   },
   {
     title: 'Water Tank Cleaning',
@@ -93,20 +92,20 @@ const services = [
       'Point-of-use filtration systems',
     ],
     image:
-      '/water-qualty.jpg',
+      '/community training.jpeg',
   },
   {
-    title: 'Environmental Protection',
+    title: 'Mobile Water Testing Laboratories',
     description:
-      'In our commitment to protecting the environment, we seek to reduce consumable usage and use recyclable materials wherever possible. We currently offer a recycling programme for Letztest tubes, helping our clients minimise waste and operate more sustainably.',
+      'We set up and operationalise mobile water testing laboratories to provide on-site water quality analysis in remote or underserved areas. Our mobile labs are equipped with advanced testing equipment and staffed by trained professionals to deliver accurate results wherever you need them. ',
     features: [
-      'Reduced consumable usage',
-      'Recyclable material sourcing',
-      'Letztest tube recycling programme',
-      'Sustainable operational practices',
+      'School-to-school mobile water testing services',
+      'Home-to-home water quality sampling and analysis',
+      'On-site testing for organizations and institutions',
+      'Flexible deployment for any location or community',
     ],
     image:
-      '/environment.jpg',
+      '/mobile lab.jpeg',
   },
 ];
 

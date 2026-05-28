@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'Learn how Aqua Solutions International uses cookies on its website.',
+  description: 'Learn how Aqua Solutions International  Limiteduses cookies on its website.',
 };
 
 export default function CookiePolicy() {
@@ -37,7 +37,7 @@ export default function CookiePolicy() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">How we use cookies</h2>
             <p>
-              Aqua Solutions International uses cookies to improve your browsing experience, analyse how our site is used, and
+              Aqua Solutions International  Limiteduses cookies to improve your browsing experience, analyse how our site is used, and
               to remember your preferences. We do not use cookies to collect personally identifiable information without your
               explicit consent.
             </p>

@@ -28,7 +28,7 @@ export function Footer() {
             <Link href="/" className="inline-block">
               <Image
                 src="/aqua.png"
-                alt="Aqua Solutions International Logo"
+                alt="Aqua Solutions International Limited Logo"
                 width={100}
                 height={20}
                 className="h-auto w-30"
@@ -117,7 +117,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 py-2 sm:py-4 border-t mt-4 sm:mt-6 border-slate-200">
           <p className="text-center text-xs sm:text-sm">
-            Copyright 2025 &copy; Aqua Solutions International. All Rights Reserved.
+            Copyright 2015 &copy; Aqua Solutions International. All Rights Reserved.
           </p>
           <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
             <Link href="#">Privacy Policy</Link>

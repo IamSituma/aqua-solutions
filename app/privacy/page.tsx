@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Read the Aqua Solutions International privacy policy to understand how we collect, use, and protect your personal data.',
+  description: 'Read the Aqua Solutions International Limited privacy policy to understand how we collect, use, and protect your personal data.',
 };
 
 export default function PrivacyPolicy() {
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Who we are</h2>
             <p>
-              Aqua Solutions International (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a water treatment and supply company based in Kampala, Uganda.
+              Aqua Solutions International Limited(&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is a water treatment and supply company based in Kampala, Uganda.
               This Privacy Policy explains how we collect, use, and protect your personal data when you visit our website or
               interact with our services.
             </p>

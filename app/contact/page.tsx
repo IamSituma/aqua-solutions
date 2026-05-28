@@ -78,7 +78,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide font-[Inter,sans-serif] mb-1">Address</h3>
                       <p className="text-sm text-gray-600 font-[Inter,sans-serif] leading-relaxed">
-                        Aqua Solutions International Ltd.<br />
+                        Aqua Solutions International  LimitedLtd.<br />
                         Mbogo Road<br />
                         Opposite Kawempe Police Station<br />
                         P.O. Box 103773<br />

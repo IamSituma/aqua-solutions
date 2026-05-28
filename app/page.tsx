@@ -4,20 +4,11 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CtaSection } from '@/components/cta-section';
 import Link from 'next/link';
-import { useState } from 'react';
+
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 
 export default function Home() {
-  const carouselImages = [
-    { src: '/borehole water.jpg', alt: 'Borehole water' },
-    { src: '/community.jpg', alt: 'Community water' },
-    { src: '/drinking.jpg', alt: 'Clean drinking water' },
-    { src: '/filtration.jpg', alt: 'Water filtration' },
-    { src: '/purification.jpg', alt: 'Purification plant' },
-    { src: '/safe water.jpg', alt: 'Safe water supply' },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
+  const heroImage = { src: '/borehole water.jpg', alt: 'Borehole water' };
 
   const whyItems = [
     {
@@ -101,10 +92,10 @@ export default function Home() {
         <div className="absolute inset-0">
           <img
             className="object-cover w-full h-full"
-            src="/sparkling water.jpg"
+            src="/water-bg.jpg"
             alt="Sparkling Water"
           />
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
         {/* Content */}
@@ -115,8 +106,7 @@ export default function Home() {
                 Clean Water For Every Home
               </p>
               <p className="mt-6 sm:mt-12 font-[Inter,sans-serif] text-sm sm:text-base font-normal leading-7 text-white/70">
-                Aqua Solutions International provides comprehensive water treatment, purification, and supply
-                services across Kampala and Uganda. Reliable, safe, and sustainable water for
+                Aqua Solutions International Limited provides comprehensive water treatment and  water testing products across Uganda and East Africa. Reliable, safe, and sustainable water for
                 residential and commercial needs.
               </p>
               <div className="flex items-center mt-5 space-x-2 sm:space-x-4">
@@ -156,7 +146,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Water Purification',
+                title: 'Water Quality Testing',
                 description:
                   'Advanced filtration and purification systems that remove contaminants, bacteria, and impurities to deliver safe, clean drinking water for homes and businesses.',
                 img: '/water treatment.jpg',
@@ -165,13 +155,13 @@ export default function Home() {
                 title: 'Borehole Drilling',
                 description:
                   'Professional borehole drilling services to access underground water sources. We handle site assessment, drilling, casing, and pump installation from start to finish.',
-                img: '/borehole.jpg',
+                img: '/borehole.jpeg',
               },
               {
-                title: 'Water Treatment Systems',
+                title: 'Water Treatment',
                 description:
                   'Installation and maintenance of commercial and residential water treatment systems including reverse osmosis, UV sterilisation, and softening units.',
-                img: '/water treatment system.jpg',
+                img: '/purification.jpg',
               },
             ].map((service) => (
               <div key={service.title} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
@@ -249,35 +239,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: main image + thumbnail carousel */}
-            <div className="flex flex-col h-full">
-              {/* Main image */}
-              <div className="rounded-lg overflow-hidden mb-3 flex-1" style={{minHeight: '300px'}}>
-                <img
-                  src={carouselImages[activeIndex].src}
-                  alt={carouselImages[activeIndex].alt}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              {/* Thumbnails */}
-              <div className="grid grid-cols-6 gap-2">
-                {carouselImages.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveIndex(i)}
-                    className={`rounded overflow-hidden border-2 transition-all ${
-                      activeIndex === i ? 'border-[#0077b6]' : 'border-transparent hover:border-gray-300'
-                    }`}
-                  >
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      className="w-full h-14 object-contain"
-                    />
-                  </button>
-                ))}
-              </div>
+            {/* Right: single image */}
+            <div className="rounded-lg overflow-hidden flex items-stretch h-[550px]">
+              <img
+                src="/community.jpeg"
+                alt="Safe water for healthier communities"
+                className="w-full object-cover"
+              />
             </div>
 
           </div>
@@ -302,25 +270,22 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Domestic Water Filter',
-                description: 'Compact under-sink or countertop filter for home use. Removes chlorine, sediment, and heavy metals for clean, great-tasting drinking water.',
-                price: 'UGX 350,000',
-                img: '/filter.png',
-                message: 'Hello! I am interested in the Domestic Water Filter. Please send me more details.',
+                title: 'LETZTEST Test Tube',
+                description: 'Easy-to-use water test for detecting fecal bacteria, ideal for routine drinking water monitoring in remote areas to help prevent waterborne diseases and ensure safe water quality.',
+                img: '/letztest tube.jpeg',
+                message: 'Hello! I am interested in the LETZTEST Test Tube. Please send me more details.',
               },
               {
-                title: 'Reverse Osmosis System',
-                description: 'Advanced 5-stage RO system for homes and offices. Delivers up to 99% purification, removing bacteria, dissolved solids, and contaminants.',
-                price: 'UGX 1,200,000',
-                img: '/osmosis.png',
-                message: 'Hello! I am interested in the Reverse Osmosis System. Please send me more details.',
+                title: 'LETZTEST Turbidity Tube',
+                description: 'A simple and practical tool for visually measuring water turbidity, essential for chlorination preparation and routine water quality monitoring, especially where turbidity must remain below 5 NTU.',
+                img: '/Turbidity-Tube.jpg',
+                message: 'Hello! I am interested in the LETZTEST Turbidity Tube. Please send me more details.',
               },
               {
-                title: 'UV Water Steriliser',
-                description: 'Ultraviolet sterilisation unit that eliminates 99.9% of bacteria, viruses, and pathogens without chemicals. Ideal for boreholes and tanks.',
-                price: 'UGX 780,000',
-                img: '/uv.png',
-                message: 'Hello! I am interested in the UV Water Steriliser. Please send me more details.',
+                title: 'LETZTEST Benchtop MiBi Water Lab',
+                description: 'The LETZTEST Benchtop MiBi Lab is a portable, high-capacity water testing system for accurate detection of E. coli and coliform bacteria in laboratories and off-grid environments. Provides laboratory-grade accuracy',
+                img: '/letztest-benchtop.jpg',
+                message: 'Hello! I am interested in the LETZTEST Benchtop MiBi Water Lab. Please send me more details.',
               },
             ].map((product) => {
               const waNumber = '256700000000';
@@ -330,11 +295,10 @@ export default function Home() {
                   <img
                     src={product.img}
                     alt={product.title}
-                    className="w-full h-48 object-contain"
+                    className="w-full h-48 object-cover"
                   />
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-black mb-1">{product.title}</h3>
-                    <p className="text-sm font-medium text-[#0077b6] mb-3">{product.price}</p>
                     <p className="text-sm text-gray-600 leading-relaxed mb-5">{product.description}</p>
                     <div className="flex items-center gap-3">
                       <Link

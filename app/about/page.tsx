@@ -15,21 +15,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Link from 'next/link';
-import { useState } from 'react';
-
-
-
 export default function About() {
-  const carouselImages = [
-    { src: '/aqua-expo.jpeg', alt: 'Borehole water' },
-    { src: '/aqua-field.jpeg', alt: 'Community water' },
-    { src: '/aqua-staff.jpeg', alt: 'Clean drinking water' },
-    { src: '/aqua-expo2.jpeg', alt: 'Water filtration' },
-    { src: '/aqua-field2.jpeg', alt: 'Purification plant' },
-    { src: '/aqua-field3.jpeg', alt: 'Safe water supply' },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <div className="min-h-screen flex flex-col grow bg-white">
@@ -131,35 +117,13 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right: main image + thumbnail carousel */}
-            <div className="flex flex-col h-full">
-              {/* Main image */}
-              <div className="rounded-lg overflow-hidden mb-3 flex-1" style={{minHeight: '500px'}}>
-                <img
-                  src={carouselImages[activeIndex].src}
-                  alt={carouselImages[activeIndex].alt}
-                  className="w-full h-[500px] object-cover"
-                />
-              </div>
-
-              {/* Thumbnails */}
-              <div className="grid grid-cols-6 gap-2">
-                {carouselImages.map((img, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveIndex(i)}
-                    className={`rounded overflow-hidden border-2 transition-all ${
-                      activeIndex === i ? 'border-[#0077b6]' : 'border-transparent hover:border-gray-300'
-                    }`}
-                  >
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      className="w-full h-14 object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
+            {/* Right: single image */}
+            <div className="rounded-lg overflow-hidden" style={{minHeight: '500px'}}>
+              <img
+                src="/aqua-expo.jpeg"
+                alt="Aqua Solutions"
+                className="w-full h-[500px] object-cover"
+              />
             </div>
 
           </div>
@@ -248,7 +212,7 @@ export default function About() {
                     image: '/dr-jacinta.jpeg',
                     name: 'Dr. Jacintha Nayebare',
                     role: 'Director of Research and Development',
-                    description: 'A distinguished hydrogeologist, serves as the Director of Research and Development at Aqua Solutions International Limited. With over fifteen years of experience in the water and environmental management sectors, Jacintha has established herself as an expert hydrogeologist. Her extensive background encompasses a wide range of projects, from groundwater exploration and management to ensuring sustainable water quality solutions. Jacintha’s expertise in hydrogeology has been instrumental in the successful implementation of numerous water projects across Uganda, contributing significantly to the company’s mission of providing clean and safe water solutions to communities in need.',
+                    description: 'Dr. Jacintha Nayebare Gumoteyo is a distinguished hydrogeologist and currently serves as the Director of Research and Development at Aqua Solutions International Limited. With more than fifteen years of expertise in water resources and environmental management, she has established herself as a leading authority in geohydrology. Her career spans diverse projects, including groundwater development, environmental stewardship, and advancing sustainable water resource utilization.Dr. Jacintha’s academic achievements further underscore her professional excellence. She earned her Ph.D. in Water Resource Management from Makerere University, complementing her MSc in Hydrogeology, Engineering Geology, and Environmental Management from the Technical University of Darmstadt, Germany, and her BSc in Geological Resources Management from Makerere University, Uganda. These qualifications, combined with her extensive field experience, position her as a trusted expert in the sustainable management of water and environmental systems.',
                   },
                   {
                     image: '/kowalewski.jpeg',
