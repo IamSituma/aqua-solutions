@@ -51,12 +51,10 @@ export default function ProductDetail() {
             </div>
 
             <div className="flex flex-col">
-              <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#0077b6] mb-3">
-                {product.category} — {categoryLabel?.split('–')[1]?.trim()}
-              </span>
-              <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4 font-[Inter,sans-serif]">
+              <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6 font-[Inter,sans-serif] shrink-0">
                 {product.name}
               </h1>
+              <h2 className="text-lg font-semibold text-gray-900 mb-3 font-[Inter,sans-serif] shrink-0">Product Description</h2>
               <p className="text-base text-gray-600 leading-7 mb-8 font-[Inter,sans-serif]">
                 {product.description}
               </p>
@@ -124,46 +122,34 @@ export default function ProductDetail() {
             </div>
             <div className="mt-6">
               {activeTab === 'specifications' && (
-                <ul className="space-y-3">
-                  {product.specifications?.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="w-5 h-5 rounded-full bg-[#0077b6]/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="divide-y divide-gray-100">
+                  {product.specifications?.map((item, idx) => {
+                    const [label, ...rest] = item.split(': ');
+                    const value = rest.join(': ');
+                    return (
+                      <div key={idx} className="flex py-3 text-sm">
+                        <span className="w-2/5 font-semibold text-gray-900">{label}</span>
+                        <span className="w-3/5 text-gray-600">{value}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               )}
               {activeTab === 'features' && (
-                <ul className="space-y-3">
+                <div className="divide-y divide-gray-100">
                   {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="w-5 h-5 rounded-full bg-[#0077b6]/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-[#0077b6]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
-                      {feature}
-                    </li>
+                    <div key={idx} className="py-3 text-sm text-gray-600">{feature}</div>
                   ))}
-                </ul>
+                </div>
               )}
               {activeTab === 'advantages' && (
-                <ul className="space-y-3">
+                <div className="divide-y divide-gray-100">
                   {product.advantages?.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
-                        <svg className="w-3 h-3 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
-                      {item}
-                    </li>
+                    <div key={idx} className="flex py-3 text-sm">
+                      <span className="text-gray-600">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               )}
             </div>
           </div>

@@ -102,7 +102,7 @@ export default function Products() {
                 />
                 <div className="p-6 flex flex-col grow">
                   <h3 className="text-base font-bold text-gray-900 mb-2 font-[Inter,sans-serif] group-hover:text-[#0077b6] transition-colors">{product.name}</h3>
-                  <p className="text-sm text-gray-500 grow leading-relaxed">{product.description}</p>
+                  <p className="text-sm text-gray-500 grow leading-relaxed line-clamp-2">{product.description}</p>
                 </div>
               </Link>
             ))}
