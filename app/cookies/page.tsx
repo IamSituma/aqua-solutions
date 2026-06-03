@@ -4,7 +4,15 @@ import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy',
-  description: 'Learn how Aqua Solutions International  Limiteduses cookies on its website.',
+  description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
+  openGraph: {
+    title: 'Cookie Policy | Aqua Solutions International',
+    description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
+  },
+  twitter: {
+    title: 'Cookie Policy | Aqua Solutions International',
+    description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
+  },
 };
 
 export default function CookiePolicy() {
