@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 
@@ -110,6 +111,7 @@ const services = [
 ];
 
 export default function Services() {
+  useEffect(() => { document.title = 'Services | Aqua Solutions International'; }, []);
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />

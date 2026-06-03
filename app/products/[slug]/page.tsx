@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Navigation } from '@/components/navigation';
@@ -32,6 +32,12 @@ export default function ProductDetail() {
   const categoryLabel = categories.find((c) => c.id === product.category)?.label;
 
   const related = products.filter((p) => p.category === product.category && p.slug !== slug);
+
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.name} | Aqua Solutions International`;
+    }
+  }, [product]);
 
   const [activeTab, setActiveTab] = useState<'specifications' | 'advantages' | 'features'>('specifications');
 

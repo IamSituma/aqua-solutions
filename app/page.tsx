@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { CtaSection } from '@/components/cta-section';
@@ -8,6 +9,7 @@ import Link from 'next/link';
 import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid';
 
 export default function Home() {
+  useEffect(() => { document.title = 'Home | Aqua Solutions International'; }, []);
   const heroImage = { src: '/borehole water.jpg', alt: 'Borehole water' };
 
   const whyItems = [

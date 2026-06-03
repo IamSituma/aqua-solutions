@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import { CtaSection } from '@/components/cta-section';
 import { Category, categories, products } from '@/lib/products';
 
 export default function Products() {
+  useEffect(() => { document.title = 'Products | Aqua Solutions International'; }, []);
   const [activeCategory, setActiveCategory] = useState<Category>('All');
 
   const filtered = activeCategory === 'All'

@@ -120,9 +120,7 @@ export function Footer() {
             Copyright 2015 &copy; Aqua Solutions International. All Rights Reserved.
           </p>
           <div className="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm">
-            <Link href="#">Privacy Policy</Link>
-            <Link href="#">Terms of Service</Link>
-            <Link href="#">Cookie Policy</Link>
+            <Link href="/cookies">Cookie Policy</Link>
           </div>
         </div>
       </div>

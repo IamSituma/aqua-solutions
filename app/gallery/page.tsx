@@ -64,6 +64,7 @@ const galleryItems = [
 ];
 
 export default function Gallery() {
+  useEffect(() => { document.title = 'Gallery | Aqua Solutions International'; }, []);
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('All');
   const [selectedItem, setSelectedItem] = useState<typeof galleryItems[0] | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);

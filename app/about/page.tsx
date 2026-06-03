@@ -1,8 +1,7 @@
 
 'use client';
 
-
-
+import { useEffect } from 'react';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import TeamMemberCard from '@/components/team-member-card';
@@ -16,6 +15,7 @@ import {
 } from '@/components/ui/carousel';
 import Link from 'next/link';
 export default function About() {
+  useEffect(() => { document.title = 'About Us | Aqua Solutions International'; }, []);
 
   return (
     <div className="min-h-screen flex flex-col grow bg-white">

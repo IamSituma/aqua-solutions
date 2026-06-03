@@ -4,9 +4,10 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import FAQ from '@/components/faq';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Contact() {
+  useEffect(() => { document.title = 'Contact Us | Aqua Solutions International'; }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
