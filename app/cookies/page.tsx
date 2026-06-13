@@ -5,14 +5,6 @@ import { Footer } from '@/components/footer';
 export const metadata: Metadata = {
   title: 'Cookie Policy',
   description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
-  openGraph: {
-    title: 'Cookie Policy | Aqua Solutions International',
-    description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
-  },
-  twitter: {
-    title: 'Cookie Policy | Aqua Solutions International',
-    description: 'Learn how Aqua Solutions International Limited uses cookies on its website.',
-  },
 };
 
 export default function CookiePolicy() {
@@ -22,7 +14,7 @@ export default function CookiePolicy() {
 
       {/* Hero */}
       <section className="w-full bg-gray-50 border-b border-gray-100 py-8 sm:py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-bold uppercase tracking-widest text-[#0077b6] mb-3 font-[Inter,sans-serif]">Legal</p>
           <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight font-[Inter,sans-serif]">Cookie Policy</h1>
           <p className="mt-3 text-sm text-gray-500 font-[Inter,sans-serif]">Last updated: March 25, 2026</p>
@@ -31,7 +23,7 @@ export default function CookiePolicy() {
 
       {/* Content */}
       <main className="grow">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10 text-gray-700 font-[Inter,sans-serif] leading-7">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10 text-gray-700 font-[Inter,sans-serif] leading-7">
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">What are cookies?</h2>
@@ -45,7 +37,7 @@ export default function CookiePolicy() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">How we use cookies</h2>
             <p>
-              Aqua Solutions International  Limiteduses cookies to improve your browsing experience, analyse how our site is used, and
+              Aqua Solutions International Limited uses cookies to improve your browsing experience, analyse how our site is used, and
               to remember your preferences. We do not use cookies to collect personally identifiable information without your
               explicit consent.
             </p>

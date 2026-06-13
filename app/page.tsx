@@ -290,7 +290,7 @@ export default function Home() {
                 message: 'Hello! I am interested in the LETZTEST Benchtop MiBi Water Lab. Please send me more details.',
               },
             ].map((product) => {
-              const waNumber = '256700000000';
+              const waNumber = '256772606989';
               const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(product.message)}`;
               return (
                 <div key={product.title} className="rounded-lg overflow-hidden border border-gray-200 bg-white">

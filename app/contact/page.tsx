@@ -4,10 +4,9 @@ import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import FAQ from '@/components/faq';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Contact() {
-  useEffect(() => { document.title = 'Contact Us | Aqua Solutions International'; }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -79,7 +78,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide font-[Inter,sans-serif] mb-1">Address</h3>
                       <p className="text-sm text-gray-600 font-[Inter,sans-serif] leading-relaxed">
-                        Aqua Solutions International  LimitedLtd.<br />
+                        Aqua Solutions International Limited.<br />
                         Mbogo Road<br />
                         Opposite Kawempe Police Station<br />
                         P.O. Box 103773<br />

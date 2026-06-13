@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function WhatsAppFloat() {
   return (
     <Link
-      href="https://wa.me/256700000000"
+      href={`https://wa.me/256772606989?text=${encodeURIComponent('Hello 👋,\n\nI\'m interested in your products and services. Could you please share more details?\n\nThank you.')}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] rounded-full shadow-lg hover:bg-[#1ebe5d] transition-colors"

@@ -140,44 +140,44 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop',
+                  image: '/mobile%20lab.jpeg',
                   title: 'Certified Technology',
                   description: 'ISO-certified water purification systems built to international quality standards.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop',
-                  title: '15+ Years Experience',
+                  image: '/experience.jpg',
+                  title: '10+ Years Experience',
                   description: 'Our expert engineers bring over 15 years of hands-on water solutions expertise.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop',
+                  image: '/support.jpg',
                   title: '24/7 Support',
                   description: 'Round-the-clock emergency response and maintenance to keep your water flowing.',
                 },
                 {
-                  image: 'https://images.pexels.com/photos/30218643/pexels-photo-30218643.jpeg?auto=compress&cs=tinysrgb&w=800',
+                  image: '/eco%20friendly.jpg',
                   title: 'Eco-Friendly Methods',
                   description: "Sustainable, environmentally responsible practices that protect Uganda's natural resources.",
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?q=80&w=800&auto=format&fit=crop',
+                  image: '/best%20price.jpg',
                   title: 'Affordable Pricing',
                   description: 'Transparent, competitive pricing with flexible packages suited for every budget.',
                 },
                 {
-                  image: 'https://images.pexels.com/photos/3825377/pexels-photo-3825377.jpeg?auto=compress&cs=tinysrgb&w=800',
+                  image: '/testing.jpeg',
                   title: 'Water Testing',
                   description: 'Comprehensive on-site and lab water quality testing to ensure safety at every stage.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=800&auto=format&fit=crop',
+                  image: '/clean%20h20.jpg',
                   title: 'Full Maintenance',
                   description: 'End-to-end maintenance and support packages keeping systems running at peak performance.',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=800&auto=format&fit=crop',
-                  title: '500+ Installations',
-                  description: 'Over 500 successful water system installations across homes, schools, and businesses in Uganda.',
+                  image: '/borehole.jpeg',
+                  title: '20+ Installations',
+                  description: 'Over 20 successful water system installations across homes, schools, and businesses in Uganda.',
                 },
               ].map((card, idx) => (
                 <div key={idx} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden flex flex-col">
