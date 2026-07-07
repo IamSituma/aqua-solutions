@@ -151,7 +151,7 @@ export default function Home() {
                 title: 'Water Quality Testing',
                 description:
                   'Advanced filtration and purification systems that remove contaminants, bacteria, and impurities to deliver safe, clean drinking water for homes and businesses.',
-                img: '/water treatment.jpg',
+                img: '/water-testing.jpeg',
               },
               {
                 title: 'Borehole Drilling',

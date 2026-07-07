@@ -16,7 +16,7 @@ const services = [
       'Safe delivery to your location',
     ],
     image:
-      '/testink-kits.jpg',
+      '/water-testing-kits.jpg',
   },
   {
     title: 'Water Quality Management',
@@ -41,7 +41,7 @@ const services = [
       'Suitable for all water sources',
     ],
     image:
-      '/water-testing-kit.jpeg',
+      '/water-sampling.jpeg',
   },
   {
     title: 'Water Treatment',
@@ -119,7 +119,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative w-full bg-white min-h-[300px] sm:min-h-[550px] flex items-center justify-center">
         <img
-          src="/water treatment.jpg"
+          src="/testing-water.jpeg"
           alt="Our Services Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
         />

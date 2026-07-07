@@ -120,7 +120,7 @@ export default function About() {
             {/* Right: single image */}
             <div className="rounded-lg overflow-hidden" style={{minHeight: '500px'}}>
               <img
-                src="/aqua-expo.jpeg"
+                src="/exhibition-aqua.jpeg"
                 alt="Aqua Solutions"
                 className="w-full h-[500px] object-cover"
               />
@@ -165,7 +165,7 @@ export default function About() {
                   description: 'Transparent, competitive pricing with flexible packages suited for every budget.',
                 },
                 {
-                  image: '/testing.jpeg',
+                  image: '/water-testing.jpeg',
                   title: 'Water Testing',
                   description: 'Comprehensive on-site and lab water quality testing to ensure safety at every stage.',
                 },
@@ -221,7 +221,7 @@ export default function About() {
                     description: 'She is a water scientist by profession. She is a director and co-founder at Aqua Solutions International Limited as well a project manager at Letztest. Her passion is in instructing customers on how to use the companies products. She is incharge of training and capacity development. She obtained her BSc. and MSc. at the University of Duisburg-Essen, Germany, in Water Science. She currently teaches at the Rhine-Waal University of Applied Sciences, Germany, in the faculty of  Communication and Environment.',
                   },
                   {
-                    image: '/janepher.jpg',
+                    image: '/Janipher.jpeg',
                     name: 'Janepher Turinawe',
                     role: 'Director and Chief Laboratory Technician',
                     description: 'serves as the Director and Chief Laboratory Technician at Aqua Solutions International Limited. With extensive experience and expertise in laboratory operations, Jenifer oversees all aspects of the company’s laboratory operations while ensuring the highest standards of laboratory practices and protocols are maintained. Her role allows for seamless integration of technical knowledge and executive management, driving innovation and excellence within the organization.',
