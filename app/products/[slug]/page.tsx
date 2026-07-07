@@ -67,7 +67,7 @@ export default function ProductDetail() {
 
               <div className="grid grid-cols-2 sm:flex sm:flex-row items-stretch sm:items-center gap-3 mt-auto pt-6 border-t border-gray-200">
                 <a
-                  href={`https://wa.me/256772606989?text=${encodeURIComponent('Hello! I am interested in the ' + product.name + '. Please send me more details.')}`}
+                  href={`https://wa.me/256772606898?text=${encodeURIComponent('Hello! I am interested in the ' + product.name + '. Please send me more details.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-semibold px-6 py-3 rounded-md transition-colors"

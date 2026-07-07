@@ -130,17 +130,17 @@ export default function Products() {
                 description: 'All products meet ISO and WHO water quality standards, ensuring results you can present with confidence.',
               },
               {
-                image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop',
+                image: '/Aqua016.jpeg',
                 title: 'Built for the Field',
-                description: 'Rugged, portable, and solar-compatible — our kits perform under harsh conditions where lab infrastructure is unavailable.',
+                description: 'Rugged, portable, and solar-compatible, our kits perform under harsh conditions where lab infrastructure is unavailable.',
               },
               {
-                image: 'https://images.unsplash.com/photo-1581093577421-f561a654a353?q=80&w=800&auto=format&fit=crop',
+                image: '/letztest.webp',
                 title: 'Made in Germany',
                 description: 'German engineering heritage means precision manufacturing, long product lifespan, and consistent quality batch after batch.',
               },
               {
-                image: 'https://images.unsplash.com/photo-1521207418485-99c705420785?q=80&w=800&auto=format&fit=crop',
+                image: '/fieldwork2.jpeg',
                 title: 'Trusted by NGOs & Governments',
                 description: 'Used by international development organisations, public health agencies, and water utilities across East Africa.',
               },
